@@ -1,0 +1,621 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3521FE2B18C84B6F00001F98 /* LKreyosService.h in Sources */ = {isa = PBXBuildFile; fileRef = 35C00EAF18C848C700F2671A /* LKreyosService.h */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		3521FE2C18C84B6F00001F98 /* LkDiscovery.h in Sources */ = {isa = PBXBuildFile; fileRef = 35C00EB118C848C700F2671A /* LkDiscovery.h */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		35B1339418C7FFE000CE0CBE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35B1339318C7FFE000CE0CBE /* Foundation.framework */; };
+		35B1339618C7FFE000CE0CBE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35B1339518C7FFE000CE0CBE /* CoreGraphics.framework */; };
+		35B1339818C7FFE000CE0CBE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35B1339718C7FFE000CE0CBE /* UIKit.framework */; };
+		35B1339E18C7FFE000CE0CBE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 35B1339C18C7FFE000CE0CBE /* InfoPlist.strings */; };
+		35B133A018C7FFE000CE0CBE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35B1339F18C7FFE000CE0CBE /* main.m */; };
+		35B133A418C7FFE000CE0CBE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35B133A318C7FFE000CE0CBE /* AppDelegate.m */; };
+		35B133A718C7FFE000CE0CBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35B133A518C7FFE000CE0CBE /* Main.storyboard */; };
+		35B133AA18C7FFE000CE0CBE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35B133A918C7FFE000CE0CBE /* ViewController.m */; };
+		35B133AC18C7FFE000CE0CBE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35B133AB18C7FFE000CE0CBE /* Images.xcassets */; };
+		35B133B318C7FFE000CE0CBE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35B133B218C7FFE000CE0CBE /* XCTest.framework */; };
+		35B133B418C7FFE000CE0CBE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35B1339318C7FFE000CE0CBE /* Foundation.framework */; };
+		35B133B518C7FFE000CE0CBE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35B1339718C7FFE000CE0CBE /* UIKit.framework */; };
+		35B133BD18C7FFE000CE0CBE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 35B133BB18C7FFE000CE0CBE /* InfoPlist.strings */; };
+		35B133BF18C7FFE000CE0CBE /* KreyosIosAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35B133BE18C7FFE000CE0CBE /* KreyosIosAppTests.m */; };
+		35B133CD18C8011E00CE0CBE /* KreyosUIViewBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35B133CC18C8011E00CE0CBE /* KreyosUIViewBaseViewController.m */; };
+		35B133D018C8013800CE0CBE /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35B133CF18C8013800CE0CBE /* LoginViewController.m */; };
+		35B133D318C8017500CE0CBE /* KreyosHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35B133D218C8017500CE0CBE /* KreyosHomeViewController.m */; };
+		35B133D618C801CB00CE0CBE /* kreyos_nav_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 35B133D418C801CB00CE0CBE /* kreyos_nav_logo.png */; };
+		35B133D718C801CB00CE0CBE /* kreyos_nav_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35B133D518C801CB00CE0CBE /* kreyos_nav_logo@2x.png */; };
+		35B133E218C8072100CE0CBE /* TCCustomFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 35B133E118C8072000CE0CBE /* TCCustomFont.m */; };
+		35B133E318C8096000CE0CBE /* ProximaNova-RegItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 35B133DB18C8062700CE0CBE /* ProximaNova-RegItalic.otf */; };
+		35B133E418C8096000CE0CBE /* ProximaNova-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 35B133DC18C8062700CE0CBE /* ProximaNova-Bold.otf */; };
+		35B133E518C8096000CE0CBE /* ProximaNova-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 35B133DD18C8062700CE0CBE /* ProximaNova-Light.otf */; };
+		35B133E618C8096000CE0CBE /* ProximaNova-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 35B133DE18C8062700CE0CBE /* ProximaNova-Regular.otf */; };
+		35B133E718C8096000CE0CBE /* ProximaNova-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 35B133DF18C8062700CE0CBE /* ProximaNova-Semibold.otf */; };
+		35B133EC18C80F9C00CE0CBE /* CustomSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 35B133E918C80F9C00CE0CBE /* CustomSegue.m */; };
+		35B133ED18C80F9C00CE0CBE /* CustomUnwindSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 35B133EB18C80F9C00CE0CBE /* CustomUnwindSegue.m */; };
+		35B133F118C840C100CE0CBE /* KreyosUIFactoryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 35B133F018C840C100CE0CBE /* KreyosUIFactoryManager.m */; };
+		35C00EB318C848C700F2671A /* LKreyosService.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C00EAE18C848C700F2671A /* LKreyosService.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		35C00EB418C848C700F2671A /* LkDiscovery.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C00EB018C848C700F2671A /* LkDiscovery.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		35B133B618C7FFE000CE0CBE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 35B1338818C7FFE000CE0CBE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 35B1338F18C7FFE000CE0CBE;
+			remoteInfo = KreyosIosApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		35B1339018C7FFE000CE0CBE /* KreyosIosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KreyosIosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		35B1339318C7FFE000CE0CBE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		35B1339518C7FFE000CE0CBE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		35B1339718C7FFE000CE0CBE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		35B1339B18C7FFE000CE0CBE /* KreyosIosApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KreyosIosApp-Info.plist"; sourceTree = "<group>"; };
+		35B1339D18C7FFE000CE0CBE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		35B1339F18C7FFE000CE0CBE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		35B133A118C7FFE000CE0CBE /* KreyosIosApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KreyosIosApp-Prefix.pch"; sourceTree = "<group>"; };
+		35B133A218C7FFE000CE0CBE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		35B133A318C7FFE000CE0CBE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		35B133A618C7FFE000CE0CBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		35B133A818C7FFE000CE0CBE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		35B133A918C7FFE000CE0CBE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		35B133AB18C7FFE000CE0CBE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		35B133B118C7FFE000CE0CBE /* KreyosIosAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KreyosIosAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		35B133B218C7FFE000CE0CBE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		35B133BA18C7FFE000CE0CBE /* KreyosIosAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KreyosIosAppTests-Info.plist"; sourceTree = "<group>"; };
+		35B133BC18C7FFE000CE0CBE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		35B133BE18C7FFE000CE0CBE /* KreyosIosAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KreyosIosAppTests.m; sourceTree = "<group>"; };
+		35B133CB18C8011E00CE0CBE /* KreyosUIViewBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KreyosUIViewBaseViewController.h; sourceTree = "<group>"; };
+		35B133CC18C8011E00CE0CBE /* KreyosUIViewBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KreyosUIViewBaseViewController.m; sourceTree = "<group>"; };
+		35B133CE18C8013800CE0CBE /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		35B133CF18C8013800CE0CBE /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		35B133D118C8017500CE0CBE /* KreyosHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KreyosHomeViewController.h; sourceTree = "<group>"; };
+		35B133D218C8017500CE0CBE /* KreyosHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KreyosHomeViewController.m; sourceTree = "<group>"; };
+		35B133D418C801CB00CE0CBE /* kreyos_nav_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kreyos_nav_logo.png; sourceTree = "<group>"; };
+		35B133D518C801CB00CE0CBE /* kreyos_nav_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kreyos_nav_logo@2x.png"; sourceTree = "<group>"; };
+		35B133D818C8027D00CE0CBE /* KreyosUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KreyosUtility.h; sourceTree = "<group>"; };
+		35B133DB18C8062700CE0CBE /* ProximaNova-RegItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-RegItalic.otf"; sourceTree = "<group>"; };
+		35B133DC18C8062700CE0CBE /* ProximaNova-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Bold.otf"; sourceTree = "<group>"; };
+		35B133DD18C8062700CE0CBE /* ProximaNova-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Light.otf"; sourceTree = "<group>"; };
+		35B133DE18C8062700CE0CBE /* ProximaNova-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Regular.otf"; sourceTree = "<group>"; };
+		35B133DF18C8062700CE0CBE /* ProximaNova-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Semibold.otf"; sourceTree = "<group>"; };
+		35B133E118C8072000CE0CBE /* TCCustomFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCCustomFont.m; sourceTree = "<group>"; };
+		35B133E818C80F9C00CE0CBE /* CustomSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSegue.h; sourceTree = "<group>"; };
+		35B133E918C80F9C00CE0CBE /* CustomSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSegue.m; sourceTree = "<group>"; };
+		35B133EA18C80F9C00CE0CBE /* CustomUnwindSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomUnwindSegue.h; sourceTree = "<group>"; };
+		35B133EB18C80F9C00CE0CBE /* CustomUnwindSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomUnwindSegue.m; sourceTree = "<group>"; };
+		35B133EF18C840C100CE0CBE /* KreyosUIFactoryManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KreyosUIFactoryManager.h; sourceTree = "<group>"; };
+		35B133F018C840C100CE0CBE /* KreyosUIFactoryManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KreyosUIFactoryManager.m; sourceTree = "<group>"; };
+		35C00EAE18C848C700F2671A /* LKreyosService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKreyosService.m; sourceTree = "<group>"; };
+		35C00EAF18C848C700F2671A /* LKreyosService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKreyosService.h; sourceTree = "<group>"; };
+		35C00EB018C848C700F2671A /* LkDiscovery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LkDiscovery.m; sourceTree = "<group>"; };
+		35C00EB118C848C700F2671A /* LkDiscovery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LkDiscovery.h; sourceTree = "<group>"; };
+		35C00EB218C848C700F2671A /* KreyosProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KreyosProtocol.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		35B1338D18C7FFE000CE0CBE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35B1339618C7FFE000CE0CBE /* CoreGraphics.framework in Frameworks */,
+				35B1339818C7FFE000CE0CBE /* UIKit.framework in Frameworks */,
+				35B1339418C7FFE000CE0CBE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35B133AE18C7FFE000CE0CBE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35B133B318C7FFE000CE0CBE /* XCTest.framework in Frameworks */,
+				35B133B518C7FFE000CE0CBE /* UIKit.framework in Frameworks */,
+				35B133B418C7FFE000CE0CBE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		35B1338718C7FFE000CE0CBE = {
+			isa = PBXGroup;
+			children = (
+				35B1339918C7FFE000CE0CBE /* KreyosIosApp */,
+				35B133B818C7FFE000CE0CBE /* KreyosIosAppTests */,
+				35B1339218C7FFE000CE0CBE /* Frameworks */,
+				35B1339118C7FFE000CE0CBE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		35B1339118C7FFE000CE0CBE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				35B1339018C7FFE000CE0CBE /* KreyosIosApp.app */,
+				35B133B118C7FFE000CE0CBE /* KreyosIosAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		35B1339218C7FFE000CE0CBE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				35B1339318C7FFE000CE0CBE /* Foundation.framework */,
+				35B1339518C7FFE000CE0CBE /* CoreGraphics.framework */,
+				35B1339718C7FFE000CE0CBE /* UIKit.framework */,
+				35B133B218C7FFE000CE0CBE /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		35B1339918C7FFE000CE0CBE /* KreyosIosApp */ = {
+			isa = PBXGroup;
+			children = (
+				35B133CA18C800CD00CE0CBE /* StoryBoards */,
+				35B133C918C800AA00CE0CBE /* Scripts */,
+				35B133C818C8000C00CE0CBE /* Resources */,
+				35B133AB18C7FFE000CE0CBE /* Images.xcassets */,
+				35B1339A18C7FFE000CE0CBE /* Supporting Files */,
+			);
+			path = KreyosIosApp;
+			sourceTree = "<group>";
+		};
+		35B1339A18C7FFE000CE0CBE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				35B1339B18C7FFE000CE0CBE /* KreyosIosApp-Info.plist */,
+				35B1339C18C7FFE000CE0CBE /* InfoPlist.strings */,
+				35B1339F18C7FFE000CE0CBE /* main.m */,
+				35B133A118C7FFE000CE0CBE /* KreyosIosApp-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		35B133B818C7FFE000CE0CBE /* KreyosIosAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				35B133BE18C7FFE000CE0CBE /* KreyosIosAppTests.m */,
+				35B133B918C7FFE000CE0CBE /* Supporting Files */,
+			);
+			path = KreyosIosAppTests;
+			sourceTree = "<group>";
+		};
+		35B133B918C7FFE000CE0CBE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				35B133BA18C7FFE000CE0CBE /* KreyosIosAppTests-Info.plist */,
+				35B133BB18C7FFE000CE0CBE /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		35B133C818C8000C00CE0CBE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				35B133DA18C8060D00CE0CBE /* Assets */,
+				35B133D918C8060900CE0CBE /* Font */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		35B133C918C800AA00CE0CBE /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				35C00EAD18C848BF00F2671A /* LK */,
+				35B133E018C8071900CE0CBE /* Utilities */,
+				35B133A218C7FFE000CE0CBE /* AppDelegate.h */,
+				35B133A318C7FFE000CE0CBE /* AppDelegate.m */,
+				35B133A818C7FFE000CE0CBE /* ViewController.h */,
+				35B133A918C7FFE000CE0CBE /* ViewController.m */,
+				35B133CB18C8011E00CE0CBE /* KreyosUIViewBaseViewController.h */,
+				35B133CC18C8011E00CE0CBE /* KreyosUIViewBaseViewController.m */,
+				35B133CE18C8013800CE0CBE /* LoginViewController.h */,
+				35B133CF18C8013800CE0CBE /* LoginViewController.m */,
+				35B133D118C8017500CE0CBE /* KreyosHomeViewController.h */,
+				35B133D218C8017500CE0CBE /* KreyosHomeViewController.m */,
+			);
+			name = Scripts;
+			sourceTree = "<group>";
+		};
+		35B133CA18C800CD00CE0CBE /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				35B133A518C7FFE000CE0CBE /* Main.storyboard */,
+			);
+			name = StoryBoards;
+			sourceTree = "<group>";
+		};
+		35B133D918C8060900CE0CBE /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				35B133DB18C8062700CE0CBE /* ProximaNova-RegItalic.otf */,
+				35B133DC18C8062700CE0CBE /* ProximaNova-Bold.otf */,
+				35B133DD18C8062700CE0CBE /* ProximaNova-Light.otf */,
+				35B133DE18C8062700CE0CBE /* ProximaNova-Regular.otf */,
+				35B133DF18C8062700CE0CBE /* ProximaNova-Semibold.otf */,
+			);
+			name = Font;
+			sourceTree = "<group>";
+		};
+		35B133DA18C8060D00CE0CBE /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				35B133D418C801CB00CE0CBE /* kreyos_nav_logo.png */,
+				35B133D518C801CB00CE0CBE /* kreyos_nav_logo@2x.png */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		35B133E018C8071900CE0CBE /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				35B133E818C80F9C00CE0CBE /* CustomSegue.h */,
+				35B133E918C80F9C00CE0CBE /* CustomSegue.m */,
+				35B133EA18C80F9C00CE0CBE /* CustomUnwindSegue.h */,
+				35B133EB18C80F9C00CE0CBE /* CustomUnwindSegue.m */,
+				35B133D818C8027D00CE0CBE /* KreyosUtility.h */,
+				35B133E118C8072000CE0CBE /* TCCustomFont.m */,
+				35B133EF18C840C100CE0CBE /* KreyosUIFactoryManager.h */,
+				35B133F018C840C100CE0CBE /* KreyosUIFactoryManager.m */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		35C00EAD18C848BF00F2671A /* LK */ = {
+			isa = PBXGroup;
+			children = (
+				35C00EAE18C848C700F2671A /* LKreyosService.m */,
+				35C00EAF18C848C700F2671A /* LKreyosService.h */,
+				35C00EB018C848C700F2671A /* LkDiscovery.m */,
+				35C00EB118C848C700F2671A /* LkDiscovery.h */,
+				35C00EB218C848C700F2671A /* KreyosProtocol.h */,
+			);
+			name = LK;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		35B1338F18C7FFE000CE0CBE /* KreyosIosApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 35B133C218C7FFE000CE0CBE /* Build configuration list for PBXNativeTarget "KreyosIosApp" */;
+			buildPhases = (
+				35B1338C18C7FFE000CE0CBE /* Sources */,
+				35B1338D18C7FFE000CE0CBE /* Frameworks */,
+				35B1338E18C7FFE000CE0CBE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KreyosIosApp;
+			productName = KreyosIosApp;
+			productReference = 35B1339018C7FFE000CE0CBE /* KreyosIosApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		35B133B018C7FFE000CE0CBE /* KreyosIosAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 35B133C518C7FFE000CE0CBE /* Build configuration list for PBXNativeTarget "KreyosIosAppTests" */;
+			buildPhases = (
+				35B133AD18C7FFE000CE0CBE /* Sources */,
+				35B133AE18C7FFE000CE0CBE /* Frameworks */,
+				35B133AF18C7FFE000CE0CBE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				35B133B718C7FFE000CE0CBE /* PBXTargetDependency */,
+			);
+			name = KreyosIosAppTests;
+			productName = KreyosIosAppTests;
+			productReference = 35B133B118C7FFE000CE0CBE /* KreyosIosAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		35B1338818C7FFE000CE0CBE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = KrisJulio;
+				TargetAttributes = {
+					35B133B018C7FFE000CE0CBE = {
+						TestTargetID = 35B1338F18C7FFE000CE0CBE;
+					};
+				};
+			};
+			buildConfigurationList = 35B1338B18C7FFE000CE0CBE /* Build configuration list for PBXProject "KreyosIosApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 35B1338718C7FFE000CE0CBE;
+			productRefGroup = 35B1339118C7FFE000CE0CBE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				35B1338F18C7FFE000CE0CBE /* KreyosIosApp */,
+				35B133B018C7FFE000CE0CBE /* KreyosIosAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		35B1338E18C7FFE000CE0CBE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35B133AC18C7FFE000CE0CBE /* Images.xcassets in Resources */,
+				35B1339E18C7FFE000CE0CBE /* InfoPlist.strings in Resources */,
+				35B133E618C8096000CE0CBE /* ProximaNova-Regular.otf in Resources */,
+				35B133E418C8096000CE0CBE /* ProximaNova-Bold.otf in Resources */,
+				35B133D718C801CB00CE0CBE /* kreyos_nav_logo@2x.png in Resources */,
+				35B133E318C8096000CE0CBE /* ProximaNova-RegItalic.otf in Resources */,
+				35B133E518C8096000CE0CBE /* ProximaNova-Light.otf in Resources */,
+				35B133E718C8096000CE0CBE /* ProximaNova-Semibold.otf in Resources */,
+				35B133A718C7FFE000CE0CBE /* Main.storyboard in Resources */,
+				35B133D618C801CB00CE0CBE /* kreyos_nav_logo.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35B133AF18C7FFE000CE0CBE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35B133BD18C7FFE000CE0CBE /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		35B1338C18C7FFE000CE0CBE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3521FE2B18C84B6F00001F98 /* LKreyosService.h in Sources */,
+				35C00EB418C848C700F2671A /* LkDiscovery.m in Sources */,
+				35C00EB318C848C700F2671A /* LKreyosService.m in Sources */,
+				3521FE2C18C84B6F00001F98 /* LkDiscovery.h in Sources */,
+				35B133AA18C7FFE000CE0CBE /* ViewController.m in Sources */,
+				35B133A418C7FFE000CE0CBE /* AppDelegate.m in Sources */,
+				35B133CD18C8011E00CE0CBE /* KreyosUIViewBaseViewController.m in Sources */,
+				35B133A018C7FFE000CE0CBE /* main.m in Sources */,
+				35B133EC18C80F9C00CE0CBE /* CustomSegue.m in Sources */,
+				35B133ED18C80F9C00CE0CBE /* CustomUnwindSegue.m in Sources */,
+				35B133E218C8072100CE0CBE /* TCCustomFont.m in Sources */,
+				35B133D318C8017500CE0CBE /* KreyosHomeViewController.m in Sources */,
+				35B133D018C8013800CE0CBE /* LoginViewController.m in Sources */,
+				35B133F118C840C100CE0CBE /* KreyosUIFactoryManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35B133AD18C7FFE000CE0CBE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35B133BF18C7FFE000CE0CBE /* KreyosIosAppTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		35B133B718C7FFE000CE0CBE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 35B1338F18C7FFE000CE0CBE /* KreyosIosApp */;
+			targetProxy = 35B133B618C7FFE000CE0CBE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		35B1339C18C7FFE000CE0CBE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				35B1339D18C7FFE000CE0CBE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		35B133A518C7FFE000CE0CBE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				35B133A618C7FFE000CE0CBE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		35B133BB18C7FFE000CE0CBE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				35B133BC18C7FFE000CE0CBE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		35B133C018C7FFE000CE0CBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		35B133C118C7FFE000CE0CBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		35B133C318C7FFE000CE0CBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KreyosIosApp/KreyosIosApp-Prefix.pch";
+				INFOPLIST_FILE = "KreyosIosApp/KreyosIosApp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		35B133C418C7FFE000CE0CBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KreyosIosApp/KreyosIosApp-Prefix.pch";
+				INFOPLIST_FILE = "KreyosIosApp/KreyosIosApp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		35B133C618C7FFE000CE0CBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KreyosIosApp.app/KreyosIosApp";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KreyosIosApp/KreyosIosApp-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "KreyosIosAppTests/KreyosIosAppTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		35B133C718C7FFE000CE0CBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KreyosIosApp.app/KreyosIosApp";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KreyosIosApp/KreyosIosApp-Prefix.pch";
+				INFOPLIST_FILE = "KreyosIosAppTests/KreyosIosAppTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		35B1338B18C7FFE000CE0CBE /* Build configuration list for PBXProject "KreyosIosApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35B133C018C7FFE000CE0CBE /* Debug */,
+				35B133C118C7FFE000CE0CBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		35B133C218C7FFE000CE0CBE /* Build configuration list for PBXNativeTarget "KreyosIosApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35B133C318C7FFE000CE0CBE /* Debug */,
+				35B133C418C7FFE000CE0CBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		35B133C518C7FFE000CE0CBE /* Build configuration list for PBXNativeTarget "KreyosIosAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35B133C618C7FFE000CE0CBE /* Debug */,
+				35B133C718C7FFE000CE0CBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 35B1338818C7FFE000CE0CBE /* Project object */;
+}
