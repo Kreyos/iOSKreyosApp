@@ -28,8 +28,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    NSLog(@"GGSR");
+    [super hideNavigationItem:self];
+    
 	// Do any additional setup after loading the view.
 }
 

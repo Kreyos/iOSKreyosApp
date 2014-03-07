@@ -30,12 +30,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	
+    [super hideNavigationItem:self];
+    
     
     //Customize Tab
     [self CustomizeGoalTab];
+    
 }
 
+#pragma mark CUSTOMIZATIONS
 - (void)CustomizeGoalTab
 {
     NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:
@@ -47,15 +50,32 @@
     
     [GoalTab setTitleTextAttributes:attributes forState:UIControlStateNormal];
     [GoalTab setTitleTextAttributes:highlightedAttributes forState:UIControlStateHighlighted];
-    GoalTab.tintColor = [UIColor grayColor];
+    
+    [GoalTab setTintColor:WHITE];
+    [GoalTab setSelectedSegmentIndex:0];
+    
+    [GoalTab setFrame:CGRectMake(GoalTab.frame.origin.x, GoalTab.frame.origin.y, GoalTab.frame.size.width, GoalTab.frame.size.height * 1.8f)];
     
     [[UISegmentedControl appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor blackColor]} forState:UIControlStateSelected];
-
+    
+    [self segmentedControlCallback:GoalTab];
 }
 
--(void)onSegmentedControlChanged:(id)sender
+
+- (IBAction) segmentedControlCallback:(UISegmentedControl*)sender
 {
-    
+    for (int i=0; i<[sender.subviews count]; i++)
+    {
+        if ([[sender.subviews objectAtIndex:i]isSelected] )
+        {
+            UIColor *tintcolor= [UIColor grayColor];
+            [[sender.subviews objectAtIndex:i] setTintColor:tintcolor];
+        }
+        else
+        {
+            [[sender.subviews objectAtIndex:i] setTintColor:nil];
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning

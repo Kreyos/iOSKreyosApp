@@ -18,11 +18,10 @@
                         options:UIViewAnimationOptionCurveEaseInOut
                      animations:^{
                          // Shrink!
-                         sourceViewController.view.transform = CGAffineTransformMakeScale(0.05, 0.05);
-                         sourceViewController.view.center = self.targetPoint;
+                         sourceViewController.view.center = CGPointMake(sourceViewController.view.frame.size.width + 320, sourceViewController.view.center.y);
                      }
                      completion:^(BOOL finished){
-                         [destinationViewController.view removeFromSuperview]; // remove from temp super view
+                         //[destinationViewController.view removeFromSuperview]; // remove from temp super view
                          [sourceViewController dismissViewControllerAnimated:NO completion:NULL]; // dismiss VC
                      }];
 }

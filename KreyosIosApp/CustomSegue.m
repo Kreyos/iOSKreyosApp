@@ -3,6 +3,7 @@
 //
 
 #import "CustomSegue.h"
+#import "KreyosUtility.h"
 
 @implementation CustomSegue
 
@@ -12,21 +13,18 @@
     
     // Add the destination view as a subview, temporarily
     [sourceViewController.view addSubview:destinationViewController.view];
-    
+    destinationViewController.view.center = CGPointMake(SCREEN_SIZE.width + 320, destinationViewController.view.center.y);
     // Transformation start scale
-    destinationViewController.view.transform = CGAffineTransformMakeScale(0.05, 0.05);
+    //destinationViewController.view.transform = CGAffineTransformMakeScale(0.05, 0.05);
     
     // Store original centre point of the destination view
-    CGPoint originalCenter = destinationViewController.view.center;
-    // Set center to start point of the button
-    destinationViewController.view.center = self.originatingPoint;
+    CGPoint originalCenter = sourceViewController.view.center;
     
     [UIView animateWithDuration:0.5
                           delay:0.0
                         options:UIViewAnimationOptionCurveEaseInOut
                      animations:^{
-                         // Grow!
-                         destinationViewController.view.transform = CGAffineTransformMakeScale(1.0, 1.0);
+                         
                          destinationViewController.view.center = originalCenter;
                      }
                      completion:^(BOOL finished){

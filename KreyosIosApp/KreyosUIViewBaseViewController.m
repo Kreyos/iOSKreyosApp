@@ -19,6 +19,8 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        
+        
     }
     return self;
 }
@@ -27,6 +29,11 @@
     //Iterate through your subviews, or some other custom array of views
     for (UIView *view in self.view.subviews)
         [view resignFirstResponder];
+}
+
+- (void) hideNavigationItem:(UIViewController*)p_vc
+{
+   [p_vc.navigationController.navigationBar setHidden:TRUE];
 }
 
 - (void)viewDidLoad

@@ -45,9 +45,15 @@
 
 #define SCREEN_SIZE                 [[UIScreen mainScreen] bounds].size
 
-#define CLEAR                       [UIColor clearColor];
+#define CLEAR                       [UIColor clearColor]
+#define WHITE                       [UIColor whiteColor]
+#define RED                         [UIColor redColor]
+#define BLUE                        [UIColor blueColor]
+
 #define LOGIN_BLUE                  [UIColor colorWithRed:0/255.0f green:190/255.0f blue:240/255.0f alpha:1.0f]
 
+#pragma mark TAGS
+#define CATEG_DATA_TAG              4
 
 #define WEB_URL                     @"www.google.com"
 
