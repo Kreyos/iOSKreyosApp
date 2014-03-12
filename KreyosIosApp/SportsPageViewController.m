@@ -5,10 +5,14 @@
 //  Created by KrisJulio on 3/7/14.
 //  Copyright (c) 2014 KrisJulio. All rights reserved.
 //
+#define TRASH_BTN       1
+#define REFRESH_BTN     2
 
 #import "SportsPageViewController.h"
 #import "KreyosUtility.h"
 #import "KreyosBluetoothViewController.h"
+#import "SVGFactoryManager.h"
+#import "SVGKImage.h"
 
 @interface SportsPageViewController ()
 {
@@ -56,6 +60,7 @@ TimerStates timerState;
 @synthesize startBtn;
 @synthesize resumeBtn;
 @synthesize stopBtn;
+@synthesize addBtn;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -77,14 +82,55 @@ TimerStates timerState;
     [self setTileCountTo:5];
     [self setUpSportsButtons];
     [self setStatus];
+    
+    [self setUpCellButtons:cell_1];
+    [self setUpCellButtons:cell_2];
+    [self setUpCellButtons:cell_3];
+    [self setUpCellButtons:cell_4];
+    
 }
 
 - (void) setUpSportsButtons
 {
+    //Set Up ADD CELL BUTTON
+    SVGKFastImageView *addImage = [[SVGFactoryManager sharedInstance] createSVGImage:@"add_button"];
+    addImage.layer.anchorPoint = CGPointMake(1, 1);
+    addImage.transform = CGAffineTransformScale(addImage.transform, 0.4f, 0.5f);
+    [addBtn addSubview: (SVGKFastImageView*)addImage];
+    addBtn.contentMode = UIViewContentModeCenter;
+    
     currentNumberOfTiles;
     pauseBtn.hidden = TRUE;
     resumeBtn.hidden = TRUE;
     stopBtn.hidden = TRUE;
+}
+
+- (void) setUpCellButtons:(UIView*)cellView
+{
+    cellView.layer.borderColor = [UIColor grayColor].CGColor;
+    cellView.layer.borderWidth = 0.5f;
+    //cellView
+    for (UIView *vCell in [cellView subviews]) {
+        
+        //1 is REFRESH 2 is DELETE
+        switch (vCell.tag) {
+            case 1:
+                
+                [vCell addSubview: (SVGKFastImageView*)[[SVGFactoryManager sharedInstance] createSVGImage:@"trashcan_icon"]];
+                vCell.contentMode = UIViewContentModeCenter;
+                
+                break;
+            case 2:
+                
+                [vCell addSubview: (SVGKFastImageView*)[[SVGFactoryManager sharedInstance] createSVGImage:@"trashcan_icon"]];
+                vCell.contentMode = UIViewContentModeCenter;
+                
+                break;
+            default:
+                break;
+        }
+        
+    }
 }
 
 #pragma mark TIMER
@@ -496,6 +542,42 @@ TimerStates timerState;
     
     //return the color-burned image
     return coloredImg;
+}
+
+#pragma mark TOUCH SECTION
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    //Iterate through your subviews, or some other custom array of view
+    
+    UITouch *touch = [touches anyObject];
+    
+    if ( [touch.view isKindOfClass:[SVGKFastImageView class]])
+    {
+        NSLog(@"SVGKFASTIMAGE SPORTS!!");
+        
+        SVGKFastImageView *tappedBtn = (SVGKFastImageView*)touch.view;
+        
+        switch ([tappedBtn.superview tag]) {
+            case 1:
+                //TRASHBTN
+                [self setTileCountTo:currentNumberOfTiles <= 3 ? 3 : --currentNumberOfTiles];
+                
+                break;
+            case 2:
+                //REFRESHBTN
+                
+                break;
+            case 3:
+                //ADDBTN
+                [self setTileCountTo:currentNumberOfTiles >= 5 ? 5 : ++currentNumberOfTiles];
+                break;
+            default:
+                break;
+        }
+        
+    }
+    
+    for (UIView *view in self.view.subviews)
+        [view resignFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning

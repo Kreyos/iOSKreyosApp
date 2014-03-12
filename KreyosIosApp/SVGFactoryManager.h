@@ -10,7 +10,7 @@
 
 @interface SVGFactoryManager : KreyosUIViewBaseViewController
 
--(SVGKLayeredImageView*) createSVGImage:(NSString*)imageName;
+-(SVGKFastImageView*) createSVGImage:(NSString*)imageName;
 +(SVGFactoryManager*) sharedInstance;
 
 @end

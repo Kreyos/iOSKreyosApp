@@ -7,6 +7,7 @@
 //
 
 #import "KreyosUIViewBaseViewController.h"
+#import "SVGKFastImageView.h"
 
 @interface KreyosUIViewBaseViewController ()
 
@@ -26,7 +27,16 @@
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
-    //Iterate through your subviews, or some other custom array of views
+    //Iterate through your subviews, or some other custom array of view
+    
+    UITouch *touch = [touches anyObject];
+    NSLog(@"VIEW %@", [touch.view class]);
+    
+    if ( [touch.view isKindOfClass:[SVGKFastImageView class]])
+    {
+        NSLog(@"SVGKFASTIMAGE AKO!!");
+    }
+    
     for (UIView *view in self.view.subviews)
         [view resignFirstResponder];
 }
@@ -41,6 +51,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
+
+
 
 - (void)didReceiveMemoryWarning
 {

@@ -14,7 +14,7 @@
 #define kMenuOpenAminationDuration 0.35f
 #define kMenuCloseAminationDuration 0.35f
 
-#define kMenuTransformScale CATransform3DMakeScale(0.9, 0.9, 0.9)
+#define kMenuTransformScale CATransform3DMakeScale(1, 1, 1)
 #define kMenuLayerInitialOpacity 0.4f
 
 typedef enum {

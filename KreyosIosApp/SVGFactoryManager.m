@@ -32,9 +32,9 @@ static SVGFactoryManager* _sharedInstance = nil;
     return  _sharedInstance;
 }
 
--(SVGKLayeredImageView*) createSVGImage:(NSString*)imageName
+-(SVGKFastImageView*) createSVGImage:(NSString*)imageName
 {
-    SVGKLayeredImageView *svgImg = [[SVGKLayeredImageView alloc] initWithSVGKImage:[SVGKImage imageNamed:imageName]];
+    SVGKFastImageView *svgImg = [[SVGKFastImageView alloc] initWithSVGKImage:[SVGKImage imageNamed:imageName]];
     return svgImg;
 }
 

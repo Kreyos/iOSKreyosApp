@@ -47,6 +47,7 @@
 {
     if ((self = [super initWithCoder:aDecoder]))
     {
+        
         [self setUp];
     }
     return self;
@@ -96,7 +97,6 @@
     {
         view = [[SVGFactoryManager sharedInstance] createSVGImage:[badgeItems[index] objectForKey:@"image"]];
         view.contentMode = UIViewContentModeCenter;
-        
     }
     else
     {

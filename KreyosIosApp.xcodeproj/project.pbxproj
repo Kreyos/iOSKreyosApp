@@ -177,6 +177,7 @@
 		354B415518D05A2000F23143 /* todaysidebar_icon.svg in Resources */ = {isa = PBXBuildFile; fileRef = 354B413D18D05A1F00F23143 /* todaysidebar_icon.svg */; };
 		354B415618D05A2000F23143 /* trashcan_icon.svg in Resources */ = {isa = PBXBuildFile; fileRef = 354B413E18D05A1F00F23143 /* trashcan_icon.svg */; };
 		354B415718D05A2000F23143 /* watch_icon_stats.svg in Resources */ = {isa = PBXBuildFile; fileRef = 354B413F18D05A1F00F23143 /* watch_icon_stats.svg */; };
+		354B415A18D06C7100F23143 /* SVGButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 354B415918D06C7100F23143 /* SVGButton.m */; };
 		3579267D18C9AA3400EF8017 /* libSVGKit-iOS.1.2.0pre.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 357925FC18C9AA3300EF8017 /* libSVGKit-iOS.1.2.0pre.a */; };
 		3579268218C9ABE600EF8017 /* greenbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 3579267F18C9ABE600EF8017 /* greenbar.png */; };
 		3579268318C9ABE600EF8017 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 3579268018C9ABE600EF8017 /* menu.png */; };
@@ -412,6 +413,8 @@
 		354B413D18D05A1F00F23143 /* todaysidebar_icon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = todaysidebar_icon.svg; sourceTree = "<group>"; };
 		354B413E18D05A1F00F23143 /* trashcan_icon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = trashcan_icon.svg; sourceTree = "<group>"; };
 		354B413F18D05A1F00F23143 /* watch_icon_stats.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = watch_icon_stats.svg; sourceTree = "<group>"; };
+		354B415818D06C7100F23143 /* SVGButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVGButton.h; sourceTree = "<group>"; };
+		354B415918D06C7100F23143 /* SVGButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVGButton.m; sourceTree = "<group>"; };
 		357925FC18C9AA3300EF8017 /* libSVGKit-iOS.1.2.0pre.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libSVGKit-iOS.1.2.0pre.a"; sourceTree = "<group>"; };
 		3579260018C9AA3300EF8017 /* AppleSucksDOMImplementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppleSucksDOMImplementation.h; sourceTree = "<group>"; };
 		3579260118C9AA3300EF8017 /* Attr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Attr.h; sourceTree = "<group>"; };
@@ -947,6 +950,8 @@
 				350329D018CDAA7E0047B5E9 /* SVGFactoryManager.m */,
 				350329D218CDAF4F0047B5E9 /* BadgeSystemManager.h */,
 				350329D318CDAF4F0047B5E9 /* BadgeSystemManager.m */,
+				354B415818D06C7100F23143 /* SVGButton.h */,
+				354B415918D06C7100F23143 /* SVGButton.m */,
 			);
 			name = Scripts;
 			sourceTree = "<group>";
@@ -1455,6 +1460,7 @@
 				354B412318D0146800F23143 /* iCarousel.m in Sources */,
 				35F9C3EE18C8619700290DF0 /* AMSlideMenuLeftTableViewController.m in Sources */,
 				35B133A418C7FFE000CE0CBE /* AppDelegate.m in Sources */,
+				354B415A18D06C7100F23143 /* SVGButton.m in Sources */,
 				35F9C3F218C8619700290DF0 /* UIViewController+AMSlideMenu.m in Sources */,
 				35B133CD18C8011E00CE0CBE /* KreyosUIViewBaseViewController.m in Sources */,
 				35B133A018C7FFE000CE0CBE /* main.m in Sources */,
