@@ -16,6 +16,10 @@
 	<string>${PRODUCT_NAME}</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
+	<key>FacebookAppID</key>
+	<string>243672019116075</string>
+	<key>FacebookDisplayName</key>
+	<string>Kreyos Watch</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleSignature</key>

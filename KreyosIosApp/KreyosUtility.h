@@ -51,6 +51,8 @@
 #define BLUE                        [UIColor blueColor]
 
 #define LOGIN_BLUE                  [UIColor colorWithRed:0/255.0f green:190/255.0f blue:240/255.0f alpha:1.0f]
+#define KREYOS_GRAY                 [UIColor colorWithRed:175/255.0f green:175/255.0f blue:175/255.0f alpha:1.0f]
+
 
 #pragma mark TAGS
 #define CATEG_DATA_TAG              4

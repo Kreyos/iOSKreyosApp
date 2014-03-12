@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "LoginViewController.h"
+#import "Reachability.h"
 
 @implementation AppDelegate
 
@@ -44,5 +45,25 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+- (BOOL)isConnectedToWifi
+{
+    Reachability *reachability = [Reachability reachabilityForInternetConnection];
+    NetworkStatus networkStats = [reachability currentReachabilityStatus];
+    
+    if ( networkStats == NotReachable )
+    {
+        UIAlertView *alert = [[UIAlertView alloc]
+                              initWithTitle:@"Connection Problem"
+                              message:@"This device is not connected to internet"
+                              delegate: nil
+                              cancelButtonTitle:NSLocalizedString(@"OK", @"InAppSettingsKit")
+                              otherButtonTitles:nil];
+        [alert show];
+    }
+    
+    return networkStats != NotReachable;
+}
+
 
 @end

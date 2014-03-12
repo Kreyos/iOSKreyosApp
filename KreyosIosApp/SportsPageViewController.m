@@ -8,6 +8,7 @@
 
 #import "SportsPageViewController.h"
 #import "KreyosUtility.h"
+#import "KreyosBluetoothViewController.h"
 
 @interface SportsPageViewController ()
 {
@@ -23,6 +24,15 @@
     NSArray *m_trackableObjects;
     
     int currentNumberOfTiles;
+    
+    NSTimer* watchTimer;
+
+    //Timer
+    int m_timeCounter;
+    int m_recordedTime;
+    int m_seconds;
+    int m_minutes;
+    int m_hours;
 }
 
 typedef enum TimerState
@@ -31,8 +41,9 @@ typedef enum TimerState
     TimeStop,
     TimePause,
     TimeResume,
-        
+    
 } TimerStates;
+TimerStates timerState;
 
 @synthesize dataHolder;
 @synthesize sportsTimer;
@@ -61,6 +72,7 @@ typedef enum TimerState
 	// Do any additional setup after loading the view.
   
     dataHolder.layer.cornerRadius = 10;
+    timerState = TimeStop;
     
     [self setTileCountTo:5];
     [self setUpSportsButtons];
@@ -75,11 +87,126 @@ typedef enum TimerState
     stopBtn.hidden = TRUE;
 }
 
+#pragma mark TIMER
+
+-(IBAction)updateTimer:(UIButton*)sender
+{
+    switch([sender tag])
+    {
+        case TimeStart: //Timer start
+            
+            if ( ![[KreyosBluetoothViewController sharedInstance] isDeviceConnectedToBT] )
+            {
+                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No Device Detected" message:@"Please connect first your Kreyos Watch" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                [alertView show];
+                return;
+            }
+            
+            if (timerState == TimeStart) return;
+            
+            m_timeCounter = 0;
+            
+            //Set State to start
+            timerState = TimeStart;
+            
+            watchTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(fireTimer:) userInfo:nil repeats:YES];
+            
+            [watchTimer fire];
+            
+            //Show pause and hide start button
+            startBtn.hidden = YES;
+            pauseBtn.hidden = NO;
+            
+            
+            break;
+            
+        case TimePause: //Timer pause
+            
+            timerState = TimePause;
+            
+            resumeBtn.hidden = stopBtn.hidden = startBtn.hidden = NO;
+            
+            pauseBtn.hidden = YES;
+            
+            break;
+            
+        case TimeResume: //Timer resume
+            
+            timerState = TimeResume;
+            
+            resumeBtn.hidden = stopBtn.hidden = startBtn.hidden = YES;
+            startBtn.hidden = NO;
+            
+            //Show pause and hide start button
+            startBtn.hidden = YES;
+            pauseBtn.hidden = NO;
+            
+            break;
+            
+        case TimeStop: //Timer stop
+            
+            if(timerState == TimeStop) return;
+            
+            timerState = TimeStop;
+            [watchTimer invalidate];
+            [self resetTimer];
+            
+            resumeBtn.hidden = stopBtn.hidden = YES;
+            startBtn.hidden = NO;
+            
+            /*
+            if(viewMapGps)
+            {
+                KreyosGPSMapViewController *mapView = (KreyosGPSMapViewController*)viewMapGps;
+                [mapView resetValues];
+            }
+            */
+            //[self showSummaryPage];
+            
+            break;
+    }
+}
+
+-(void)fireTimer:(NSTimer *)timer {
+    
+    if(timerState == TimePause) return;
+    
+    m_timeCounter ++ ;
+    [self populateLabelwithTime:m_timeCounter];
+    
+}
+
+-(void) populateLabelwithTime:(int)milliseconds
+{
+    
+    NSString *time_string;
+    
+    m_seconds = milliseconds;
+    m_minutes = m_seconds / 60;
+    m_hours = m_minutes / 60;
+    
+    m_seconds -= m_minutes * 60;
+    m_minutes -= m_hours * 60;
+    
+    time_string = [NSString stringWithFormat:@"%02d:%02d:%02d", m_hours, m_minutes, m_seconds];
+    
+    sportsTimer.text = time_string;
+   
+    /*
+    if(viewMapGps)
+    {
+        KreyosGPSMapViewController *mapView = (KreyosGPSMapViewController*)viewMapGps;
+        [mapView setTime:time_string];
+    }
+     */
+}
+
+
 #pragma mark BUTTON CALLBACKS
 
 -(IBAction)testing:(id)sender
 {
-    [self setTileCountTo:5];
+    [self setTileCountTo:--currentNumberOfTiles];
 }
 
 #pragma mark SET TILES
@@ -89,7 +216,7 @@ typedef enum TimerState
     float yPos = 192;
     float xPos = 0;
     
-    CGSize fiveGridSize = CGSizeMake(139, 99);
+    CGSize fiveGridSize = CGSizeMake(140, 99);
     CGSize fourGridSize = CGSizeMake(280, 66.66f);
     CGSize threeGridSize = CGSizeMake(280, 99);
     
@@ -151,7 +278,7 @@ typedef enum TimerState
                                           fiveGridSize.width,
                                           fiveGridSize.height);
                 
-                cell_4.frame = CGRectMake(cell_1.frame.size.width,
+                cell_4.frame = CGRectMake(fiveGridSize.width,
                                           yPos + cell_1.frame.size.height,
                                           fiveGridSize.width,
                                           fiveGridSize.height);
@@ -166,9 +293,13 @@ typedef enum TimerState
         
         //set current tile num
         currentNumberOfTiles = count;
-        
     }];
     
+}
+
+-(void) resetTimer
+{
+    sportsTimer.text = [NSString stringWithFormat:@"00:00:00"];
 }
 
 

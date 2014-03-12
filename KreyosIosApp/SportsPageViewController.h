@@ -26,4 +26,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *resumeBtn;
 @property (weak, nonatomic) IBOutlet UIButton *stopBtn;
 
+-(IBAction)updateTimer:(UIButton*)sender;
+-(IBAction)testing:(id)sender;
+
 @end

@@ -9,5 +9,6 @@
 #import "KreyosUIViewBaseViewController.h"
 
 @interface LoginViewController : KreyosUIViewBaseViewController
+@property (weak, nonatomic) IBOutlet UIButton *_facebookBtn;
 
 @end

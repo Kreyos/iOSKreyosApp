@@ -7,6 +7,7 @@
 //
 
 #import "MainVC.h"
+#import "KreyosUtility.h"
 
 @interface MainVC ()
 
@@ -26,6 +27,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [[UINavigationBar appearance] setBarTintColor:LOGIN_BLUE];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
 	// Do any additional setup after loading the view.
 }
 
@@ -57,7 +61,7 @@
             identifier = @"home";
             break;
         case 1:
-            identifier = @"setNewGoal";
+            identifier = @"bluetooth";
             break;
     }
     
@@ -77,19 +81,19 @@
 - (void)configureLeftMenuButton:(UIButton *)button
 {
     CGRect frame = button.frame;
-    frame = CGRectMake(0, 0, 25, 13);
+    frame = CGRectMake(0, 0, 34.5f, 31);
     button.frame = frame;
     button.backgroundColor = [UIColor clearColor];
-    [button setImage:[UIImage imageNamed:@"simpleMenuButton"] forState:UIControlStateNormal];
+    [button setImage:[UIImage imageNamed:@"menu"] forState:UIControlStateNormal];
 }
 
 - (void)configureRightMenuButton:(UIButton *)button
 {
     CGRect frame = button.frame;
-    frame = CGRectMake(0, 0, 25, 13);
+    frame = CGRectMake(0, 0, 34.5f, 31);
     button.frame = frame;
     button.backgroundColor = [UIColor clearColor];
-    [button setImage:[UIImage imageNamed:@"simpleMenuButton"] forState:UIControlStateNormal];
+    [button setImage:[UIImage imageNamed:@"watch"] forState:UIControlStateNormal];
 }
 
 - (void) configureSlideLayer:(CALayer *)layer

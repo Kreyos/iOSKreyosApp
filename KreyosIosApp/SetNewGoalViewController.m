@@ -31,7 +31,7 @@
 {
     [super viewDidLoad];
     
-    [super hideNavigationItem:self];
+   [super hideNavigationItem:self];
 }
 
 - (void)didReceiveMemoryWarning

@@ -29,7 +29,7 @@
     AMSlideMenuMainViewController *mainVC = [AMSlideMenuMainViewController getInstanceForVC:self];
     
     UINavigationItem *navItem = self.navigationItem;
-
+    
     UIButton *leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [mainVC configureLeftMenuButton:leftBtn];
     [leftBtn addTarget:mainVC action:@selector(openLeftMenu) forControlEvents:UIControlEventTouchUpInside];

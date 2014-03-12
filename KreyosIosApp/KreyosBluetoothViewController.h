@@ -10,5 +10,11 @@
 
 @interface KreyosBluetoothViewController : KreyosUIViewBaseViewController
 @property (weak, nonatomic) IBOutlet UIButton *searchDevicesBtn;
+@property (weak, nonatomic) IBOutlet UITableView *sensorsTable;
+
+//Methods
+- (IBAction)scan:(id)sender;
+-(BOOL)isDeviceConnectedToBT;
++ (KreyosBluetoothViewController *)sharedInstance;
 
 @end

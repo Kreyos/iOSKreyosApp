@@ -8,8 +8,9 @@
 
 #import "KreyosUIViewBaseViewController.h"
 #import "AMSlideMenuMainViewController.h"
+#import "iCarousel.h"
 
-@interface KreyosHomeViewController : KreyosUIViewBaseViewController
+@interface KreyosHomeViewController : KreyosUIViewBaseViewController<iCarouselDataSource, iCarouselDelegate>
 {
     IBOutlet UIView *goalView;
 }
@@ -22,6 +23,8 @@
 //Badge View
 @property (weak, nonatomic) IBOutlet UILabel *badgeTitle;
 @property (weak, nonatomic) IBOutlet UILabel *badgeDescription;
+@property (weak, nonatomic) IBOutlet UIImageView *badgeImageHolder;
+@property (weak, nonatomic) IBOutlet iCarousel *carouselView;
 
 //First PanelView
 @property (weak, nonatomic) IBOutlet UILabel *activeOrInativeLabel;
