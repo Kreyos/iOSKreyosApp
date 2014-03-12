@@ -266,12 +266,13 @@ TimerStates timerState;
     CGSize fourGridSize = CGSizeMake(280, 66.66f);
     CGSize threeGridSize = CGSizeMake(280, 99);
     
+
     
     [UIView animateWithDuration: 0.2f animations:^{
         
+        int fSize = 0;
         switch (count) {
             case 3:
-                
                 cell_1.frame = CGRectMake(xPos,
                                           yPos,
                                           threeGridSize.width,
@@ -285,6 +286,7 @@ TimerStates timerState;
                 cell_3.transform = CGAffineTransformMakeScale(0, 0);
                 cell_4.transform = CGAffineTransformMakeScale(0, 0);
                 
+                fSize = 50;
                 break;
                 
             case 4:
@@ -299,6 +301,7 @@ TimerStates timerState;
                                           fourGridSize.width,
                                           fourGridSize.height);
                 
+                cell_3.transform = CGAffineTransformMakeScale(1, 1);
                 cell_3.frame = CGRectMake(xPos,
                                           cell_2.frame.origin.y + cell_2.frame.size.height,
                                           fourGridSize.width,
@@ -306,7 +309,9 @@ TimerStates timerState;
                 
                 cell_4.transform = CGAffineTransformMakeScale(0, 0);
                 
+                fSize = 30;
                 break;
+                
             case 5:
                 
                 cell_1.frame = CGRectMake(xPos,
@@ -324,16 +329,22 @@ TimerStates timerState;
                                           fiveGridSize.width,
                                           fiveGridSize.height);
                 
+                cell_4.transform = CGAffineTransformMakeScale(1, 1);
                 cell_4.frame = CGRectMake(fiveGridSize.width,
                                           yPos + cell_1.frame.size.height,
                                           fiveGridSize.width,
                                           fiveGridSize.height);
                 
+                
+                fSize = 50;
                 break;
                 
             default:
                 break;
+                
         }
+        [self updateTextScale:(fSize)];
+       
         
     } completion:^(BOOL finished) {
         
@@ -341,6 +352,20 @@ TimerStates timerState;
         currentNumberOfTiles = count;
     }];
     
+}
+
+-(void) updateTextScale : (int) p_size
+{
+    NSArray *viewArray = [NSArray arrayWithObjects:cell_1, cell_2, cell_3, cell_4, nil];
+    for( UIView *view in viewArray)
+    {
+        for ( UILabel *label in [view subviews] ) {
+            if( [label isKindOfClass:[ UILabel class] ] && [label tag] == 4 )
+            {
+                [label setFont:REGULAR_FONT_WITH_SIZE(p_size)];
+            }
+        }
+    }
 }
 
 -(void) resetTimer
