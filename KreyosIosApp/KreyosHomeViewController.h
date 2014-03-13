@@ -10,7 +10,7 @@
 #import "AMSlideMenuMainViewController.h"
 #import "iCarousel.h"
 
-@interface KreyosHomeViewController : KreyosUIViewBaseViewController<iCarouselDataSource, iCarouselDelegate>
+@interface KreyosHomeViewController : KreyosUIViewBaseViewController<iCarouselDataSource, iCarouselDelegate> 
 {
     IBOutlet UIView *goalView;
 }
@@ -19,6 +19,7 @@
 @property (nonatomic) IBOutlet UIView *goalView;
 
 - (IBAction) segmentedControlCallback:(UISegmentedControl*)sender;
++ (KreyosHomeViewController *)sharedInstance;
 
 //Badge View
 @property (weak, nonatomic) IBOutlet UILabel *badgeTitle;
@@ -34,5 +35,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *minLabel;
 @property (weak, nonatomic) IBOutlet UILabel *secondsLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *userImage;
+
+//ALertView
+@property (nonatomic, readwrite) UITableView *bluetoothTable;
 
 @end

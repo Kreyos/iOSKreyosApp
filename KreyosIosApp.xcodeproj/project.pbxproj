@@ -149,6 +149,18 @@
 		35032AE818CDC0900047B5E9 /* wear_250hrs.svg in Resources */ = {isa = PBXBuildFile; fileRef = 35032A6118CDC0900047B5E9 /* wear_250hrs.svg */; };
 		3521FE2B18C84B6F00001F98 /* LKreyosService.h in Sources */ = {isa = PBXBuildFile; fileRef = 35C00EAF18C848C700F2671A /* LKreyosService.h */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		3521FE2C18C84B6F00001F98 /* LkDiscovery.h in Sources */ = {isa = PBXBuildFile; fileRef = 35C00EB118C848C700F2671A /* LkDiscovery.h */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		352FEF7618D1AC900098827F /* AppIcon29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = 352FEF6B18D1AC900098827F /* AppIcon29x29.png */; };
+		352FEF7718D1AC900098827F /* AppIcon29x29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 352FEF6C18D1AC900098827F /* AppIcon29x29@2x.png */; };
+		352FEF7818D1AC900098827F /* AppIcon40x40.png in Resources */ = {isa = PBXBuildFile; fileRef = 352FEF6D18D1AC900098827F /* AppIcon40x40.png */; };
+		352FEF7918D1AC900098827F /* AppIcon40x40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 352FEF6E18D1AC900098827F /* AppIcon40x40@2x.png */; };
+		352FEF7A18D1AC900098827F /* AppIcon57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = 352FEF6F18D1AC900098827F /* AppIcon57x57.png */; };
+		352FEF7B18D1AC900098827F /* AppIcon58x58.png in Resources */ = {isa = PBXBuildFile; fileRef = 352FEF7018D1AC900098827F /* AppIcon58x58.png */; };
+		352FEF7C18D1AC900098827F /* AppIcon60x60.png in Resources */ = {isa = PBXBuildFile; fileRef = 352FEF7118D1AC900098827F /* AppIcon60x60.png */; };
+		352FEF7D18D1AC900098827F /* AppIcon60x60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 352FEF7218D1AC900098827F /* AppIcon60x60@2x.png */; };
+		352FEF7E18D1AC900098827F /* AppIcon76x76.png in Resources */ = {isa = PBXBuildFile; fileRef = 352FEF7318D1AC900098827F /* AppIcon76x76.png */; };
+		352FEF7F18D1AC900098827F /* AppIcon76x76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 352FEF7418D1AC900098827F /* AppIcon76x76@2x.png */; };
+		352FEF8018D1AC900098827F /* AppIcon114.png in Resources */ = {isa = PBXBuildFile; fileRef = 352FEF7518D1AC900098827F /* AppIcon114.png */; };
+		352FEF8618D1B2D80098827F /* KreyosSVGImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 352FEF8518D1B2D80098827F /* KreyosSVGImageView.m */; };
 		353DDDEA18C963DC00141480 /* SetNewGoalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 353DDDE918C963DC00141480 /* SetNewGoalViewController.m */; };
 		353DDDED18C9665900141480 /* Main in Resources */ = {isa = PBXBuildFile; fileRef = 353DDDEB18C9665900141480 /* Main */; };
 		353DDDF018C971FE00141480 /* SportsPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 353DDDEF18C971FE00141480 /* SportsPageViewController.m */; };
@@ -382,6 +394,19 @@
 		35032A5F18CDC0900047B5E9 /* walk_10hrs.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = walk_10hrs.svg; sourceTree = "<group>"; };
 		35032A6018CDC0900047B5E9 /* walk_15k.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = walk_15k.svg; sourceTree = "<group>"; };
 		35032A6118CDC0900047B5E9 /* wear_250hrs.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = wear_250hrs.svg; sourceTree = "<group>"; };
+		352FEF6B18D1AC900098827F /* AppIcon29x29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon29x29.png; sourceTree = "<group>"; };
+		352FEF6C18D1AC900098827F /* AppIcon29x29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon29x29@2x.png"; sourceTree = "<group>"; };
+		352FEF6D18D1AC900098827F /* AppIcon40x40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon40x40.png; sourceTree = "<group>"; };
+		352FEF6E18D1AC900098827F /* AppIcon40x40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon40x40@2x.png"; sourceTree = "<group>"; };
+		352FEF6F18D1AC900098827F /* AppIcon57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon57x57.png; sourceTree = "<group>"; };
+		352FEF7018D1AC900098827F /* AppIcon58x58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon58x58.png; sourceTree = "<group>"; };
+		352FEF7118D1AC900098827F /* AppIcon60x60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon60x60.png; sourceTree = "<group>"; };
+		352FEF7218D1AC900098827F /* AppIcon60x60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon60x60@2x.png"; sourceTree = "<group>"; };
+		352FEF7318D1AC900098827F /* AppIcon76x76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon76x76.png; sourceTree = "<group>"; };
+		352FEF7418D1AC900098827F /* AppIcon76x76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon76x76@2x.png"; sourceTree = "<group>"; };
+		352FEF7518D1AC900098827F /* AppIcon114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon114.png; sourceTree = "<group>"; };
+		352FEF8418D1B2D80098827F /* KreyosSVGImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KreyosSVGImageView.h; sourceTree = "<group>"; };
+		352FEF8518D1B2D80098827F /* KreyosSVGImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KreyosSVGImageView.m; sourceTree = "<group>"; };
 		353DDDE818C963DC00141480 /* SetNewGoalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetNewGoalViewController.h; sourceTree = "<group>"; };
 		353DDDE918C963DC00141480 /* SetNewGoalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetNewGoalViewController.m; sourceTree = "<group>"; };
 		353DDDEC18C9665900141480 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = Base; path = KreyosIosApp/Base.lproj/Main; sourceTree = "<group>"; };
@@ -644,6 +669,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		352FEF6A18D1AC870098827F /* app_icon */ = {
+			isa = PBXGroup;
+			children = (
+				352FEF6B18D1AC900098827F /* AppIcon29x29.png */,
+				352FEF6C18D1AC900098827F /* AppIcon29x29@2x.png */,
+				352FEF6D18D1AC900098827F /* AppIcon40x40.png */,
+				352FEF6E18D1AC900098827F /* AppIcon40x40@2x.png */,
+				352FEF6F18D1AC900098827F /* AppIcon57x57.png */,
+				352FEF7018D1AC900098827F /* AppIcon58x58.png */,
+				352FEF7118D1AC900098827F /* AppIcon60x60.png */,
+				352FEF7218D1AC900098827F /* AppIcon60x60@2x.png */,
+				352FEF7318D1AC900098827F /* AppIcon76x76.png */,
+				352FEF7418D1AC900098827F /* AppIcon76x76@2x.png */,
+				352FEF7518D1AC900098827F /* AppIcon114.png */,
+			);
+			name = app_icon;
+			sourceTree = "<group>";
+		};
 		354B412718D05A1F00F23143 /* sports_icons */ = {
 			isa = PBXGroup;
 			children = (
@@ -952,6 +995,8 @@
 				350329D318CDAF4F0047B5E9 /* BadgeSystemManager.m */,
 				354B415818D06C7100F23143 /* SVGButton.h */,
 				354B415918D06C7100F23143 /* SVGButton.m */,
+				352FEF8418D1B2D80098827F /* KreyosSVGImageView.h */,
+				352FEF8518D1B2D80098827F /* KreyosSVGImageView.m */,
 			);
 			name = Scripts;
 			sourceTree = "<group>";
@@ -979,6 +1024,7 @@
 		35B133DA18C8060D00CE0CBE /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				352FEF6A18D1AC870098827F /* app_icon */,
 				354B412718D05A1F00F23143 /* sports_icons */,
 				3579267E18C9AB8E00EF8017 /* UIAssets */,
 				35D9620C18C9A037009C97BA /* Badges */,
@@ -1284,10 +1330,13 @@
 				35032A8E18CDC0900047B5E9 /* daily_steps20k.svg in Resources */,
 				35032AC618CDC0900047B5E9 /* personal_goals_4.svg in Resources */,
 				35032AA518CDC0900047B5E9 /* eiffel_tower.svg in Resources */,
+				352FEF8018D1AC900098827F /* AppIcon114.png in Resources */,
 				35B133E618C8096000CE0CBE /* ProximaNova-Regular.otf in Resources */,
 				35032AD418CDC0900047B5E9 /* share_50.svg in Resources */,
 				35032AB918CDC0900047B5E9 /* login_45.svg in Resources */,
 				35032ABF18CDC0900047B5E9 /* machu_ppichu.svg in Resources */,
+				352FEF7F18D1AC900098827F /* AppIcon76x76@2x.png in Resources */,
+				352FEF7B18D1AC900098827F /* AppIcon58x58.png in Resources */,
 				35032AC718CDC0900047B5E9 /* personal_goals_6.svg in Resources */,
 				35032A8118CDC0900047B5E9 /* consecutive_sync_5w.svg in Resources */,
 				35032A8C18CDC0900047B5E9 /* daily_steps12_5k.svg in Resources */,
@@ -1307,6 +1356,7 @@
 				35032AAD18CDC0900047B5E9 /* excessive_steps_4weeks.svg in Resources */,
 				354B415618D05A2000F23143 /* trashcan_icon.svg in Resources */,
 				35032AA418CDC0900047B5E9 /* eath_moon.svg in Resources */,
+				352FEF7C18D1AC900098827F /* AppIcon60x60.png in Resources */,
 				354B414618D05A2000F23143 /* distance_icon.svg in Resources */,
 				35032AD118CDC0900047B5E9 /* share_5.svg in Resources */,
 				35032A8418CDC0900047B5E9 /* daily_act7.svg in Resources */,
@@ -1330,6 +1380,7 @@
 				35032ADA18CDC0900047B5E9 /* sync_10.svg in Resources */,
 				35032AA818CDC0900047B5E9 /* excessive_steps_1month_1mil.svg in Resources */,
 				35032AC918CDC0900047B5E9 /* personal_goals_12.svg in Resources */,
+				352FEF7618D1AC900098827F /* AppIcon29x29.png in Resources */,
 				35032ABB18CDC0900047B5E9 /* login_120.svg in Resources */,
 				353DDDED18C9665900141480 /* Main in Resources */,
 				35032A8918CDC0900047B5E9 /* daily_act16.svg in Resources */,
@@ -1363,6 +1414,7 @@
 				35032A6618CDC0900047B5E9 /* active_time2k.svg in Resources */,
 				35B133E518C8096000CE0CBE /* ProximaNova-Light.otf in Resources */,
 				35032AC218CDC0900047B5E9 /* panama_canal.svg in Resources */,
+				352FEF7E18D1AC900098827F /* AppIcon76x76.png in Resources */,
 				35032A9818CDC0900047B5E9 /* distance_7_5k.svg in Resources */,
 				35032A6F18CDC0900047B5E9 /* active_time200.svg in Resources */,
 				35B133E718C8096000CE0CBE /* ProximaNova-Semibold.otf in Resources */,
@@ -1383,6 +1435,7 @@
 				35032AD518CDC0900047B5E9 /* share_75.svg in Resources */,
 				35032AC418CDC0900047B5E9 /* personal_goals_2a.svg in Resources */,
 				354B414418D05A2000F23143 /* battery_rightsidebar.svg in Resources */,
+				352FEF7818D1AC900098827F /* AppIcon40x40.png in Resources */,
 				35032AB618CDC0900047B5E9 /* login_3.svg in Resources */,
 				35032AAE18CDC0900047B5E9 /* excessive_steps_5.svg in Resources */,
 				354B415518D05A2000F23143 /* todaysidebar_icon.svg in Resources */,
@@ -1390,6 +1443,7 @@
 				35032AD318CDC0900047B5E9 /* share_25.svg in Resources */,
 				354B414B18D05A2000F23143 /* menu_icon_stats.svg in Resources */,
 				35032A8F18CDC0900047B5E9 /* daily_steps25k.svg in Resources */,
+				352FEF7D18D1AC900098827F /* AppIcon60x60@2x.png in Resources */,
 				35032ADC18CDC0900047B5E9 /* sync_50.svg in Resources */,
 				35032AC118CDC0900047B5E9 /* nile_river.svg in Resources */,
 				3579268218C9ABE600EF8017 /* greenbar.png in Resources */,
@@ -1402,8 +1456,10 @@
 				35032AE618CDC0900047B5E9 /* walk_10hrs.svg in Resources */,
 				35032A9218CDC0900047B5E9 /* distance_1_5k.svg in Resources */,
 				35032ADE18CDC0900047B5E9 /* sync_200.svg in Resources */,
+				352FEF7A18D1AC900098827F /* AppIcon57x57.png in Resources */,
 				35032ACA18CDC0900047B5E9 /* queen_mary.svg in Resources */,
 				35032AE018CDC0900047B5E9 /* sync_500.svg in Resources */,
+				352FEF7918D1AC900098827F /* AppIcon40x40@2x.png in Resources */,
 				35032AE518CDC0900047B5E9 /* upsell_mission_watch.svg in Resources */,
 				35B133A718C7FFE000CE0CBE /* Main.storyboard in Resources */,
 				35032AD818CDC0900047B5E9 /* statue_of_liberty.svg in Resources */,
@@ -1429,6 +1485,7 @@
 				35032AE818CDC0900047B5E9 /* wear_250hrs.svg in Resources */,
 				3579268418C9ABE600EF8017 /* watch.png in Resources */,
 				35032AB418CDC0900047B5E9 /* kilimanjaro.svg in Resources */,
+				352FEF7718D1AC900098827F /* AppIcon29x29@2x.png in Resources */,
 				35032A7A18CDC0900047B5E9 /* cons_act_time_1month.svg in Resources */,
 				35032A6B18CDC0900047B5E9 /* active_time24.svg in Resources */,
 				35032ACC18CDC0900047B5E9 /* refer_a_friend_2.svg in Resources */,
@@ -1453,6 +1510,7 @@
 				350329CD18CD83FF0047B5E9 /* Reachability.m in Sources */,
 				35F9C3EC18C8619700290DF0 /* AMSlideMenuContentSegue.m in Sources */,
 				3521FE2B18C84B6F00001F98 /* LKreyosService.h in Sources */,
+				352FEF8618D1B2D80098827F /* KreyosSVGImageView.m in Sources */,
 				35F9C3ED18C8619700290DF0 /* AMSlideMenuLeftMenuSegue.m in Sources */,
 				35C00EB418C848C700F2671A /* LkDiscovery.m in Sources */,
 				35C00EB318C848C700F2671A /* LKreyosService.m in Sources */,

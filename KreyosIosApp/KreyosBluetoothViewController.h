@@ -7,14 +7,23 @@
 //
 
 #import "KreyosUIViewBaseViewController.h"
+#import "LKreyosService.h"
 
 @interface KreyosBluetoothViewController : KreyosUIViewBaseViewController
+{
+    NSTimer *fetchTimer;
+}
+
 @property (weak, nonatomic) IBOutlet UIButton *searchDevicesBtn;
 @property (weak, nonatomic) IBOutlet UITableView *sensorsTable;
 
 //Methods
-- (IBAction)scan:(id)sender;
--(BOOL)isDeviceConnectedToBT;
 + (KreyosBluetoothViewController *)sharedInstance;
+
+- (IBAction)scan:(id)sender;
+- (BOOL)isDeviceConnectedToBT;
+- (void) doWrite:(NSData*)dataValue forCharacteristics:(NSString*)characteristic;
+- (void) initialize;
+- (LKreyosService*) serviceForPeripheral:(CBPeripheral *)peripheral;
 
 @end

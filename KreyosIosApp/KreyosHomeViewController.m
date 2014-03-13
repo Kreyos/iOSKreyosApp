@@ -13,8 +13,11 @@
 #import "AppDelegate.h"
 #import "SVGFactoryManager.h"
 #import "BadgeSystemManager.h"
+#import "KreyosBluetoothViewController.h"
+#import <CoreBluetooth/CoreBluetooth.h>
+#import "LkDiscovery.h"
 
-@interface KreyosHomeViewController ()
+@interface KreyosHomeViewController ()<KreyosDiscoveryDelegate, KreyosProtocol, UITableViewDataSource, UITableViewDelegate>
 {
     CGPoint point;
     CGPoint movePoint;
@@ -22,7 +25,14 @@
     SVGKLayeredImageView *inFrontBadge;
     NSMutableArray *badgeItems;
     NSMutableArray *items;
+    
 }
+
+@property (retain, nonatomic) NSMutableArray            *connectedServices;
+@property (retain, nonatomic) CBPeripheral              *connectedperipheral;
+@property (retain, nonatomic) UILabel                   *currentlyConnectedSensor;
+@property (retain, nonatomic) LKreyosService            *currentlyDisplayingService;
+
 @end
 
 @implementation KreyosHomeViewController
@@ -31,6 +41,22 @@
 @synthesize goalView;
 @synthesize badgeImageHolder;
 @synthesize carouselView;
+@synthesize currentlyDisplayingService;
+@synthesize connectedServices;
+@synthesize connectedperipheral;
+@synthesize currentlyConnectedSensor;
+@synthesize bluetoothTable;
+
+static KreyosHomeViewController *sharedInstance = nil;
+
++ (KreyosHomeViewController *)sharedInstance
+{
+    if (sharedInstance == nil)
+    {
+        sharedInstance = [[self alloc] init];
+    }
+    return sharedInstance;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -47,11 +73,26 @@
 {
     if ((self = [super initWithCoder:aDecoder]))
     {
-        
         [self setUp];
     }
     return self;
 }
+
+- (void)initializeBluetooth
+{
+    
+    UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Bluetooth Devices" message:@"Choose to connect" delegate:self cancelButtonTitle:@"Close" otherButtonTitles:nil, nil];
+    av.delegate = self;
+    
+    bluetoothTable = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 250, 150)];
+    
+    bluetoothTable.backgroundColor = [UIColor clearColor];
+    
+    bluetoothTable.delegate = self;
+    bluetoothTable.dataSource = self;
+    
+    [av setValue:bluetoothTable forKey:@"accessoryView"];
+    [av show];}
 
 - (void)setUp
 {
@@ -70,11 +111,13 @@
 {
     [super viewDidLoad];
     
-
+    [self initializeBluetooth];
+    
     //Customize Tab
     [self CustomizeGoalTab];
     [self SetGoalTab];
 }
+
 
 #pragma mark CUSTOMIZATIONS
 -(void)SetGoalTab
@@ -183,6 +226,97 @@
     gesture.view.frame = CGRectMake(gesture.view.frame.origin.x+dX, gesture.view.frame.origin.y, gesture.view.frame.size.width, gesture.view.frame.size.height);
 }
 
+- (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	UITableViewCell	*cell;
+	CBPeripheral	*peripheral;
+	NSArray			*devices;
+	NSInteger		row	= [indexPath row];
+    static NSString *cellID = @"DeviceList";
+    
+	cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+	if (!cell)
+		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
+    
+	if ([indexPath section] == 0) {
+		devices = [[LkDiscovery sharedInstance] connectedServices];
+        peripheral = [(LKreyosService*)[devices objectAtIndex:row] peripheral];
+        
+	} else {
+		devices = [[LkDiscovery sharedInstance] foundPeripherals];
+        peripheral = (CBPeripheral*)[devices objectAtIndex:row];
+	}
+    
+    if ([[peripheral name] length])
+        [[cell textLabel] setText:[peripheral name]];
+    else
+        [[cell textLabel] setText:@"Peripheral"];
+    
+    [[cell detailTextLabel] setText: [peripheral isConnected] ? @"Connected" : @"Not connected"];
+    
+    /* if( [peripheral isConnected] )
+     [self SetThisButton:m_disconnectBtn setTruFalse:TRUE];
+     */
+	return cell;
+}
+
+
+- (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView
+{
+	return 2;
+}
+
+
+- (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+	NSInteger	res = 0;
+    
+	if (section == 0)
+		res = [[[LkDiscovery sharedInstance] connectedServices] count];
+	else
+		res = [[[LkDiscovery sharedInstance] foundPeripherals] count];
+    
+	return res;
+}
+
+
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	CBPeripheral	*peripheral;
+	NSArray			*devices;
+	NSInteger		row	= [indexPath row];
+	
+	if ([indexPath section] == 0) {
+		devices = [[LkDiscovery sharedInstance] connectedServices];
+        peripheral = [(LKreyosService*)[devices objectAtIndex:row] peripheral];
+        
+	} else {
+		devices = [[LkDiscovery sharedInstance] foundPeripherals];
+    	peripheral = (CBPeripheral*)[devices objectAtIndex:row];
+	}
+    
+	if (![peripheral isConnected]) {
+		[[LkDiscovery sharedInstance] connectPeripheral:peripheral];
+        [currentlyConnectedSensor setText:[NSString stringWithFormat: @"{%@}",[peripheral name]]];
+        
+        [currentlyConnectedSensor setEnabled:NO];
+    }
+    
+	else {
+        
+        if ( currentlyDisplayingService != nil ) {
+            currentlyDisplayingService = nil;
+        }
+        
+        
+        currentlyDisplayingService = [[KreyosBluetoothViewController sharedInstance] serviceForPeripheral:peripheral];
+        connectedperipheral=peripheral;
+        
+        [currentlyConnectedSensor setText:[NSString stringWithFormat: @"{%@}",[peripheral name]]];
+        
+    }
+    
+}
 
 - (void)didReceiveMemoryWarning
 {

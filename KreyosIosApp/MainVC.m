@@ -45,9 +45,11 @@
         case 0:
             identifier = @"home";
             break;
-        case 1:
-            identifier = @"setNewGoal";
+        case 2:
+            identifier = @"sports";
             break;
+        case 7:
+            identifier = @"firmware";
     }
     
     return identifier;
@@ -62,6 +64,9 @@
             break;
         case 1:
             identifier = @"bluetooth";
+            break;
+        case 7:
+            identifier = @"firmware";
             break;
     }
     

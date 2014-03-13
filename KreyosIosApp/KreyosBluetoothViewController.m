@@ -12,7 +12,9 @@
 #import "LkDiscovery.h"
 #import "LKreyosService.h"
 #import "KreyosUtility.h"
+#import "SportsPageViewController.h"
 #import <CoreBluetooth/CoreBluetooth.h>
+
 
 @interface KreyosBluetoothViewController ()<KreyosDiscoveryDelegate, KreyosProtocol, UITableViewDataSource, UITableViewDelegate>
 
@@ -59,19 +61,6 @@ static KreyosBluetoothViewController *sharedInstance = nil;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    //Connected Services
-    connectedServices = [NSMutableArray new];
-    
-    [[LkDiscovery sharedInstance] setDiscoveryDelegate:self];
-    [[LkDiscovery sharedInstance] setPeripheralDelegate:self];
-    [[LkDiscovery sharedInstance] startScanningForUUIDString:kKreyosServiceUUIDString];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didEnterBackgroundNotification:) name:kServiceEnteredBackgroundNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didEnterForegroundNotification:) name:kServiceEnteredForegroundNotification object:nil];
-    
-    sharedInstance = self;
-    
     [self initialize];
 }
 
@@ -95,6 +84,19 @@ static KreyosBluetoothViewController *sharedInstance = nil;
 
 - (void) initialize
 {
+    
+    //Connected Services
+    connectedServices = [NSMutableArray new];
+    
+    [[LkDiscovery sharedInstance] setDiscoveryDelegate:self];
+    [[LkDiscovery sharedInstance] setPeripheralDelegate:self];
+    [[LkDiscovery sharedInstance] startScanningForUUIDString:kKreyosServiceUUIDString];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didEnterBackgroundNotification:) name:kServiceEnteredBackgroundNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didEnterForegroundNotification:) name:kServiceEnteredForegroundNotification object:nil];
+    
+    sharedInstance = self;
+    
     
     [[LkDiscovery sharedInstance] setDiscoveryDelegate:self];
     [[LkDiscovery sharedInstance] setPeripheralDelegate:self];
@@ -359,7 +361,7 @@ static KreyosBluetoothViewController *sharedInstance = nil;
         dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
             
             
-            //[[KreyosSportsViewController sharedInstance] changeAndUpdateGrid:5];
+            [[SportsPageViewController sharedInstance] changeAndUpdateGrid:5];
             
         });
         
@@ -381,7 +383,7 @@ static KreyosBluetoothViewController *sharedInstance = nil;
             [connectedServices removeObject:service];
         }
         
-        //[[KreyosSportsViewController sharedInstance] updateTimer:1];
+        [[SportsPageViewController sharedInstance] updateTimer:1];
         //[self SetThisButton:m_disconnectBtn setTruFalse:false];
     }
 }
@@ -498,6 +500,7 @@ static KreyosBluetoothViewController *sharedInstance = nil;
     NSLog(@"refish!");
     [sensorsTable reloadData];
     
+    [[[KreyosHomeViewController sharedInstance] bluetoothTable] reloadData];
 }
 
 - (void) discoveryStatePoweredOff
@@ -663,7 +666,7 @@ static KreyosBluetoothViewController *sharedInstance = nil;
 
 -(void) startTimer
 {
-    /*
+    
     if (fetchTimer)
         [fetchTimer fire];
     else{
@@ -671,7 +674,7 @@ static KreyosBluetoothViewController *sharedInstance = nil;
         fetchTimer = [NSTimer scheduledTimerWithTimeInterval:3.0f target:self selector:@selector(fetchSportsDataFromWatch:) userInfo:nil repeats:YES];
         
     }
-     */
+    
 }
 
 
@@ -703,13 +706,13 @@ static KreyosBluetoothViewController *sharedInstance = nil;
     [desc getBytes:&data32[0] length:sizeof(data32)];
     
     //Set values for sports data
-    //[[KreyosSportsViewController sharedInstance] updateWorkOutData:data32];
+    [[SportsPageViewController sharedInstance] updateWorkOutData:data32];
     
     
     if(data32[0] == -1)
     {
-        //[fetchTimer invalidate];
-        //[fetchTimer fire];
+        [fetchTimer invalidate];
+        [fetchTimer fire];
     }
     else
     {
@@ -723,7 +726,7 @@ static KreyosBluetoothViewController *sharedInstance = nil;
         if(data32desc[0] == 0)
         {
             //StopTimer
-            //[[KreyosSportsViewController sharedInstance] updateTimer:1];
+            [[SportsPageViewController sharedInstance] updateTimer:1];
             NSString* temps = [NSString stringWithFormat:@"%d %d %d %d %d", data32[0], data32[1], data32[2], data32[3], data32[4]];
             
             NSLog(@"sports data2: %@", temps);
@@ -733,7 +736,7 @@ static KreyosBluetoothViewController *sharedInstance = nil;
             
             //Start the timer
             
-            //[[KreyosSportsViewController sharedInstance] updateTimer:0];
+            [[SportsPageViewController sharedInstance] updateTimer:0];
             
         }
         else if(data32desc[0] == 2)

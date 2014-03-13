@@ -13,6 +13,8 @@
 #import "KreyosBluetoothViewController.h"
 #import "SVGFactoryManager.h"
 #import "SVGKImage.h"
+#import "LKreyosService.h"
+#import "LkDiscovery.h"
 
 @interface SportsPageViewController ()
 {
@@ -26,7 +28,7 @@
     NSMutableArray* m_cellValueStorage;
     
     NSArray *m_trackableObjects;
-    
+    NSArray *m_cellArray;
     int currentNumberOfTiles;
     
     NSTimer* watchTimer;
@@ -62,6 +64,17 @@ TimerStates timerState;
 @synthesize stopBtn;
 @synthesize addBtn;
 
+static SportsPageViewController *sharedInstance = nil;
+
++ (SportsPageViewController *)sharedInstance
+{
+    if (sharedInstance == nil)
+    {
+        sharedInstance = [[self alloc] init];
+    }
+    return sharedInstance;
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -73,20 +86,24 @@ TimerStates timerState;
 
 - (void)viewDidLoad
 {
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-  
+    
+    sharedInstance = self;
+    
     dataHolder.layer.cornerRadius = 10;
     timerState = TimeStop;
+    
+    m_cellArray = [NSArray arrayWithObjects:cell_1, cell_2, cell_3, cell_4, nil];
     
     [self setTileCountTo:5];
     [self setUpSportsButtons];
     [self setStatus];
     
-    [self setUpCellButtons:cell_1];
-    [self setUpCellButtons:cell_2];
-    [self setUpCellButtons:cell_3];
-    [self setUpCellButtons:cell_4];
+    for (UIView *cell in m_cellArray) {
+        [self setUpCellButtons:cell];
+    }
     
 }
 
@@ -95,7 +112,7 @@ TimerStates timerState;
     //Set Up ADD CELL BUTTON
     SVGKFastImageView *addImage = [[SVGFactoryManager sharedInstance] createSVGImage:@"add_button"];
     addImage.layer.anchorPoint = CGPointMake(1, 1);
-    addImage.transform = CGAffineTransformScale(addImage.transform, 0.4f, 0.5f);
+    addImage.transform = CGAffineTransformScale(addImage.transform, 0.4f, 0.4f);
     [addBtn addSubview: (SVGKFastImageView*)addImage];
     addBtn.contentMode = UIViewContentModeCenter;
     
@@ -134,19 +151,26 @@ TimerStates timerState;
 }
 
 #pragma mark TIMER
-
--(IBAction)updateTimer:(UIButton*)sender
+-(IBAction) updateTimerWithButton:(UIButton*) sender
 {
-    switch([sender tag])
+    [self updateTimer:[sender tag]];
+}
+
+-(void)updateTimer:(int)p_timerState
+{
+    switch(p_timerState)
     {
         case TimeStart: //Timer start
             
-            if ( ![[KreyosBluetoothViewController sharedInstance] isDeviceConnectedToBT] )
+            /*if ( ![[KreyosBluetoothViewController sharedInstance] isDeviceConnectedToBT] )
             {
-                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No Device Detected" message:@"Please connect first your Kreyos Watch" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                
+                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No Device Detected" message:@"Please connect your Kreyos" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                
                 [alertView show];
                 return;
-            }
+            }*/
+
             
             if (timerState == TimeStart) return;
             
@@ -236,8 +260,9 @@ TimerStates timerState;
     
     time_string = [NSString stringWithFormat:@"%02d:%02d:%02d", m_hours, m_minutes, m_seconds];
     
-    sportsTimer.text = time_string;
-   
+    if ( sportsTimer )
+        sportsTimer.text = time_string;
+    
     /*
     if(viewMapGps)
     {
@@ -343,13 +368,80 @@ TimerStates timerState;
     
 }
 
--(void) resetTimer
+
+#pragma mark SET STATUS
+
+-(void) updateWorkOutData:(int32_t[5])p_data
 {
-    sportsTimer.text = [NSString stringWithFormat:@"00:00:00"];
+    for (UIView *cell in m_cellArray) {
+        for (UILabel *dataLbl in [cell subviews]) {
+            if ( dataLbl.tag == 4 )
+            {
+                NSLog(@"DATA LABEL : %d", p_data[[m_cellArray indexOfObject:cell] + 1]);
+                dataLbl.text = [NSString stringWithFormat:@"%d", p_data[[m_cellArray indexOfObject:cell] + 1]];
+            }
+        }
+    }
 }
 
+-(void) updateStatus:(NSString*)p_key cellNum: (UIView*) p_cell
+{
+    // IF CELL VALUE EXISTS ON CELLS
+    if ( [m_cellValueStorage containsObject:p_key] ) return;
+    
+    // REPLACE VALUE ON INDEX
+    [m_cellValueStorage replaceObjectAtIndex:p_cell.tag - 1 withObject:p_key];
+    
+    if (p_cell != nil) {
+        NSString* statusTitle   = [workoutStatus valueForKey:p_key];
+        
+        NSString* path          = [p_key stringByAppendingString:@"Icon"];
+        NSString* measurement   = [p_key stringByAppendingString:@"Measure"];
+        
+        NSString* statusIconPath        = [workoutStatus valueForKey:path];
+        NSString* statusUnitMeasurement = [workoutStatus valueForKey:measurement];
+    }
+}
 
-#pragma SET STATUS
+-(void) changeAndUpdateGrid:(int)p_count
+{
+    int8_t passedVal[4];
+    
+    switch (p_count) {
+        case 3:
+            
+            passedVal[0] = [self getByteValue:m_cellValueStorage[0]];
+            passedVal[1] = [self getByteValue:m_cellValueStorage[2]];
+            passedVal[2] = -1;
+            passedVal[3] = -1;
+            
+            break;
+        case 4:
+            
+            passedVal[0] = [self getByteValue:m_cellValueStorage[0]];
+            passedVal[1] = [self getByteValue:m_cellValueStorage[1]];
+            passedVal[2] = [self getByteValue:m_cellValueStorage[2]];
+            passedVal[3] = -1;
+            
+            break;
+        case 5:
+            
+            passedVal[0] = [self getByteValue:m_cellValueStorage[0]];
+            passedVal[1] = [self getByteValue:m_cellValueStorage[1]];
+            passedVal[2] = [self getByteValue:m_cellValueStorage[2]];
+            passedVal[3] = [self getByteValue:m_cellValueStorage[3]];
+            
+            break;
+            
+        default:
+            break;
+    }
+    
+    NSData *valueToPass = [NSData dataWithBytes:&passedVal length:sizeof(passedVal)];
+    
+    [[KreyosBluetoothViewController sharedInstance] doWrite:valueToPass forCharacteristics:BLE_HANDLE_SPORTS_GRID];
+    
+}
 
 -(void)setStatus
 {
@@ -446,40 +538,15 @@ TimerStates timerState;
     
 }
 
+#pragma mark TIMER
+
+-(void) resetTimer
+{
+    sportsTimer.text = [NSString stringWithFormat:@"00:00:00"];
+}
+
 #pragma mark UTILITY FUNCTIONS
 
--(void) updateWorkOutData:(int32_t[5])p_data
-{
-    
-    for (UILabel *lbl  in [cell_1 subviews]) {
-        UILabel *label = (UILabel*)lbl;
-        if ( label.tag == CATEG_DATA_TAG )
-        {
-            label.text = [NSString stringWithFormat:@"%d", p_data[1]];
-        }
-    }
-    for (UILabel *lbl  in [cell_2 subviews]) {
-        UILabel *label = (UILabel*)lbl;
-        if ( label.tag == CATEG_DATA_TAG )
-        {
-            label.text = [NSString stringWithFormat:@"%d", p_data[2]];
-        }
-    }
-    for (UILabel *lbl  in [cell_3 subviews]) {
-        UILabel *label = (UILabel*)lbl;
-        if ( label.tag == CATEG_DATA_TAG )
-        {
-            label.text = [NSString stringWithFormat:@"%d", p_data[3]];
-        }
-    }
-    for (UILabel *lbl  in [cell_4 subviews]) {
-        UILabel *label = (UILabel*)lbl;
-        if ( label.tag == CATEG_DATA_TAG )
-        {
-            label.text = [NSString stringWithFormat:@"%d", p_data[4]];
-        }
-    }
-}
 
 -(int8_t)getByteValue:(NSString*)p_key
 {
@@ -552,8 +619,6 @@ TimerStates timerState;
     
     if ( [touch.view isKindOfClass:[SVGKFastImageView class]])
     {
-        NSLog(@"SVGKFASTIMAGE SPORTS!!");
-        
         SVGKFastImageView *tappedBtn = (SVGKFastImageView*)touch.view;
         
         switch ([tappedBtn.superview tag]) {
@@ -579,6 +644,9 @@ TimerStates timerState;
     for (UIView *view in self.view.subviews)
         [view resignFirstResponder];
 }
+
+
+
 
 - (void)didReceiveMemoryWarning
 {

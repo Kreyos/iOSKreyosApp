@@ -12,6 +12,7 @@
 #import "KreyosFacebookController.h"
 #import "AppDelegate.h"
 #import "KreyosUtility.h"
+#import "KreyosBluetoothViewController.h"
 
 @interface LoginViewController ()
 
@@ -34,6 +35,8 @@
 {
     [super viewDidLoad];
     [super hideNavigationItem:self];
+    
+    [[KreyosBluetoothViewController sharedInstance] initialize];
     
     //Add Login FB
     FBLoginView *fbLogin = [[FBLoginView alloc] init];
