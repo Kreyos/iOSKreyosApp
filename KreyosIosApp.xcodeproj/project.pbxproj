@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		350329C718CD817D0047B5E9 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 350329C618CD817D0047B5E9 /* FacebookSDK.framework */; };
 		350329CA18CD81A40047B5E9 /* KreyosFacebookController.m in Sources */ = {isa = PBXBuildFile; fileRef = 350329C918CD81A40047B5E9 /* KreyosFacebookController.m */; };
 		350329CD18CD83FF0047B5E9 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 350329CC18CD83FF0047B5E9 /* Reachability.m */; };
 		350329D118CDAA7E0047B5E9 /* SVGFactoryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 350329D018CDAA7E0047B5E9 /* SVGFactoryManager.m */; };
@@ -190,7 +189,6 @@
 		354B415618D05A2000F23143 /* trashcan_icon.svg in Resources */ = {isa = PBXBuildFile; fileRef = 354B413E18D05A1F00F23143 /* trashcan_icon.svg */; };
 		354B415718D05A2000F23143 /* watch_icon_stats.svg in Resources */ = {isa = PBXBuildFile; fileRef = 354B413F18D05A1F00F23143 /* watch_icon_stats.svg */; };
 		354B415A18D06C7100F23143 /* SVGButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 354B415918D06C7100F23143 /* SVGButton.m */; };
-		3579267D18C9AA3400EF8017 /* libSVGKit-iOS.1.2.0pre.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 357925FC18C9AA3300EF8017 /* libSVGKit-iOS.1.2.0pre.a */; };
 		3579268218C9ABE600EF8017 /* greenbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 3579267F18C9ABE600EF8017 /* greenbar.png */; };
 		3579268318C9ABE600EF8017 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 3579268018C9ABE600EF8017 /* menu.png */; };
 		3579268418C9ABE600EF8017 /* watch.png in Resources */ = {isa = PBXBuildFile; fileRef = 3579268118C9ABE600EF8017 /* watch.png */; };
@@ -237,6 +235,8 @@
 		35F9C3F118C8619700290DF0 /* AMSlideMenuRightTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F9C3E918C8619700290DF0 /* AMSlideMenuRightTableViewController.m */; };
 		35F9C3F218C8619700290DF0 /* UIViewController+AMSlideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F9C3EB18C8619700290DF0 /* UIViewController+AMSlideMenu.m */; };
 		35F9C3F818C8735E00290DF0 /* MainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F9C3F718C8735E00290DF0 /* MainVC.m */; };
+		95D4B8DA18D089D7003267D3 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95D4B8D918D089D7003267D3 /* FacebookSDK.framework */; };
+		95D4B8DC18D08A2E003267D3 /* libSVGKit-iOS.1.2.0pre.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95D4B8DB18D08A2E003267D3 /* libSVGKit-iOS.1.2.0pre.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -250,7 +250,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		350329C618CD817D0047B5E9 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		350329C818CD81A40047B5E9 /* KreyosFacebookController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KreyosFacebookController.h; sourceTree = "<group>"; };
 		350329C918CD81A40047B5E9 /* KreyosFacebookController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KreyosFacebookController.m; sourceTree = "<group>"; };
 		350329CB18CD83FF0047B5E9 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
@@ -440,7 +439,6 @@
 		354B413F18D05A1F00F23143 /* watch_icon_stats.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = watch_icon_stats.svg; sourceTree = "<group>"; };
 		354B415818D06C7100F23143 /* SVGButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVGButton.h; sourceTree = "<group>"; };
 		354B415918D06C7100F23143 /* SVGButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVGButton.m; sourceTree = "<group>"; };
-		357925FC18C9AA3300EF8017 /* libSVGKit-iOS.1.2.0pre.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libSVGKit-iOS.1.2.0pre.a"; sourceTree = "<group>"; };
 		3579260018C9AA3300EF8017 /* AppleSucksDOMImplementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppleSucksDOMImplementation.h; sourceTree = "<group>"; };
 		3579260118C9AA3300EF8017 /* Attr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Attr.h; sourceTree = "<group>"; };
 		3579260218C9AA3300EF8017 /* BaseClassForAllSVGBasicShapes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseClassForAllSVGBasicShapes.h; sourceTree = "<group>"; };
@@ -636,6 +634,8 @@
 		35F9C3EB18C8619700290DF0 /* UIViewController+AMSlideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AMSlideMenu.m"; sourceTree = "<group>"; };
 		35F9C3F618C8735E00290DF0 /* MainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainVC.h; sourceTree = "<group>"; };
 		35F9C3F718C8735E00290DF0 /* MainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainVC.m; sourceTree = "<group>"; };
+		95D4B8D918D089D7003267D3 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		95D4B8DB18D08A2E003267D3 /* libSVGKit-iOS.1.2.0pre.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libSVGKit-iOS.1.2.0pre.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -643,12 +643,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95D4B8DC18D08A2E003267D3 /* libSVGKit-iOS.1.2.0pre.a in Frameworks */,
+				95D4B8DA18D089D7003267D3 /* FacebookSDK.framework in Frameworks */,
 				35B1339818C7FFE000CE0CBE /* UIKit.framework in Frameworks */,
-				350329C718CD817D0047B5E9 /* FacebookSDK.framework in Frameworks */,
 				35B1339618C7FFE000CE0CBE /* CoreGraphics.framework in Frameworks */,
 				35D9629818C9A196009C97BA /* QuartzCore.framework in Frameworks */,
 				35D9629618C9A191009C97BA /* libxml2.dylib in Frameworks */,
-				3579267D18C9AA3400EF8017 /* libSVGKit-iOS.1.2.0pre.a in Frameworks */,
 				35D9629418C9A18A009C97BA /* CoreImage.framework in Frameworks */,
 				35D9629218C9A15F009C97BA /* CoreText.framework in Frameworks */,
 				35E7A11D18C978BA00A7E941 /* MapKit.framework in Frameworks */,
@@ -899,8 +899,8 @@
 		35B1339218C7FFE000CE0CBE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				350329C618CD817D0047B5E9 /* FacebookSDK.framework */,
-				357925FC18C9AA3300EF8017 /* libSVGKit-iOS.1.2.0pre.a */,
+				95D4B8DB18D08A2E003267D3 /* libSVGKit-iOS.1.2.0pre.a */,
+				95D4B8D918D089D7003267D3 /* FacebookSDK.framework */,
 				357925FD18C9AA3300EF8017 /* usr */,
 				35D9629718C9A196009C97BA /* QuartzCore.framework */,
 				35D9629518C9A191009C97BA /* libxml2.dylib */,
@@ -1674,7 +1674,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/krisjulio/iOSKreyosApp,
+					/Users/joemacmini/Documents/FacebookSDK,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KreyosIosApp/KreyosIosApp-Prefix.pch";
@@ -1683,8 +1683,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\\\"$(SRCROOT)/\\\"",
-					/Users/krisjulio/iOSKreyosApp,
+					"\\\\\\\"$(SRCROOT)/\\\\\\\"",
+					/Users/joemacmini/iOSKreyosApp,
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1700,7 +1700,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/krisjulio/iOSKreyosApp,
+					/Users/joemacmini/Documents/FacebookSDK,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KreyosIosApp/KreyosIosApp-Prefix.pch";
@@ -1709,8 +1709,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\\\"$(SRCROOT)/\\\"",
-					/Users/krisjulio/iOSKreyosApp,
+					"\\\\\\\"$(SRCROOT)/\\\\\\\"",
+					/Users/joemacmini/iOSKreyosApp,
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
