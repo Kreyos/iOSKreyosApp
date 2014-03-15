@@ -111,6 +111,9 @@ static KreyosHomeViewController *sharedInstance = nil;
 {
     [super viewDidLoad];
     
+    //INITIALIZE THIS AS INSTANCE
+    sharedInstance = self;
+    
     [self initializeBluetooth];
     
     //Customize Tab
@@ -177,7 +180,7 @@ static KreyosHomeViewController *sharedInstance = nil;
     [GoalTab setTitleTextAttributes:attributes forState:UIControlStateNormal];
     [GoalTab setTitleTextAttributes:highlightedAttributes forState:UIControlStateHighlighted];
     
-    [GoalTab setTintColor:KREYOS_GRAY];
+    [GoalTab setTintColor:WHITE];
     [GoalTab setSelectedSegmentIndex:0];
     
     [GoalTab setFrame:CGRectMake(GoalTab.frame.origin.x, GoalTab.frame.origin.y, GoalTab.frame.size.width, GoalTab.frame.size.height * 1.8f)];
@@ -194,13 +197,13 @@ static KreyosHomeViewController *sharedInstance = nil;
     {
         if ([[sender.subviews objectAtIndex:i]isSelected] )
         {
-            UIColor *tintcolor= KREYOS_GRAY;
-           [[sender.subviews objectAtIndex:i] setTintColor:tintcolor];
+            
+            UIColor *tintcolor= [UIColor whiteColor];
+            [[sender.subviews objectAtIndex:i] setTintColor:tintcolor];
         }
         else
         {
-            
-            UIColor *tintcolor= [UIColor whiteColor];
+            UIColor *tintcolor= KREYOS_GRAY;
             [[sender.subviews objectAtIndex:i] setTintColor:tintcolor];
         }
     }
@@ -235,9 +238,10 @@ static KreyosHomeViewController *sharedInstance = nil;
     static NSString *cellID = @"DeviceList";
     
 	cell = [tableView dequeueReusableCellWithIdentifier:cellID];
-	if (!cell)
+	if (!cell){
 		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
-    
+        cell.backgroundColor = [UIColor clearColor];
+    }
 	if ([indexPath section] == 0) {
 		devices = [[LkDiscovery sharedInstance] connectedServices];
         peripheral = [(LKreyosService*)[devices objectAtIndex:row] peripheral];

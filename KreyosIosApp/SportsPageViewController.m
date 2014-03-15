@@ -217,11 +217,10 @@ static SportsPageViewController *sharedInstance = nil;
             
             if(timerState == TimeStop) return;
             
-            timerState = TimeStop;
             [watchTimer invalidate];
             [self resetTimer];
             
-            resumeBtn.hidden = stopBtn.hidden = YES;
+            pauseBtn.hidden = resumeBtn.hidden = stopBtn.hidden = YES;
             startBtn.hidden = NO;
             
             /*
@@ -232,6 +231,8 @@ static SportsPageViewController *sharedInstance = nil;
             }
             */
             //[self showSummaryPage];
+            
+            timerState = TimeStop;
             
             break;
     }
@@ -297,6 +298,9 @@ static SportsPageViewController *sharedInstance = nil;
         switch (count) {
             case 3:
                 
+                cell_3.transform = CGAffineTransformMakeScale(0, 0);
+                cell_4.transform = CGAffineTransformMakeScale(0, 0);
+                
                 cell_1.frame = CGRectMake(xPos,
                                           yPos,
                                           threeGridSize.width,
@@ -307,12 +311,12 @@ static SportsPageViewController *sharedInstance = nil;
                                           threeGridSize.width,
                                           threeGridSize.height);
                 
-                cell_3.transform = CGAffineTransformMakeScale(0, 0);
-                cell_4.transform = CGAffineTransformMakeScale(0, 0);
-                
                 break;
                 
             case 4:
+                
+                cell_3.transform = CGAffineTransformMakeScale(1, 1);
+                cell_4.transform = CGAffineTransformMakeScale(0, 0);
                 
                 cell_1.frame = CGRectMake(xPos,
                                           yPos,
@@ -329,10 +333,12 @@ static SportsPageViewController *sharedInstance = nil;
                                           fourGridSize.width,
                                           fourGridSize.height);
                 
-                cell_4.transform = CGAffineTransformMakeScale(0, 0);
                 
                 break;
             case 5:
+                
+                cell_3.transform = CGAffineTransformMakeScale(1, 1);
+                cell_4.transform = CGAffineTransformMakeScale(1, 1);
                 
                 cell_1.frame = CGRectMake(xPos,
                                           yPos,
@@ -353,6 +359,7 @@ static SportsPageViewController *sharedInstance = nil;
                                           yPos + cell_1.frame.size.height,
                                           fiveGridSize.width,
                                           fiveGridSize.height);
+                
                 
                 break;
                 

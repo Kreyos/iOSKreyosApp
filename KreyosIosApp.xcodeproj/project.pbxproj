@@ -160,6 +160,8 @@
 		352FEF7F18D1AC900098827F /* AppIcon76x76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 352FEF7418D1AC900098827F /* AppIcon76x76@2x.png */; };
 		352FEF8018D1AC900098827F /* AppIcon114.png in Resources */ = {isa = PBXBuildFile; fileRef = 352FEF7518D1AC900098827F /* AppIcon114.png */; };
 		352FEF8618D1B2D80098827F /* KreyosSVGImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 352FEF8518D1B2D80098827F /* KreyosSVGImageView.m */; };
+		352FEF9018D1E71E0098827F /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 352FEF8F18D1E71E0098827F /* FacebookSDK.framework */; };
+		352FEF9218D1E73F0098827F /* libSVGKit-iOS.1.2.0pre.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 352FEF9118D1E73F0098827F /* libSVGKit-iOS.1.2.0pre.a */; };
 		353DDDEA18C963DC00141480 /* SetNewGoalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 353DDDE918C963DC00141480 /* SetNewGoalViewController.m */; };
 		353DDDED18C9665900141480 /* Main in Resources */ = {isa = PBXBuildFile; fileRef = 353DDDEB18C9665900141480 /* Main */; };
 		353DDDF018C971FE00141480 /* SportsPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 353DDDEF18C971FE00141480 /* SportsPageViewController.m */; };
@@ -192,6 +194,9 @@
 		3579268218C9ABE600EF8017 /* greenbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 3579267F18C9ABE600EF8017 /* greenbar.png */; };
 		3579268318C9ABE600EF8017 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 3579268018C9ABE600EF8017 /* menu.png */; };
 		3579268418C9ABE600EF8017 /* watch.png in Resources */ = {isa = PBXBuildFile; fileRef = 3579268118C9ABE600EF8017 /* watch.png */; };
+		3595CFC518D2974500170289 /* FirmwareUpdateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3595CFC418D2974500170289 /* FirmwareUpdateViewController.m */; };
+		3595CFDB18D2BB8000170289 /* cycling.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3595CFD818D2BB8000170289 /* cycling.svg */; };
+		3595CFDC18D2BB8000170289 /* running.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3595CFD918D2BB8000170289 /* running.svg */; };
 		35B1339418C7FFE000CE0CBE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35B1339318C7FFE000CE0CBE /* Foundation.framework */; };
 		35B1339618C7FFE000CE0CBE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35B1339518C7FFE000CE0CBE /* CoreGraphics.framework */; };
 		35B1339818C7FFE000CE0CBE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35B1339718C7FFE000CE0CBE /* UIKit.framework */; };
@@ -221,10 +226,14 @@
 		35B133F118C840C100CE0CBE /* KreyosUIFactoryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 35B133F018C840C100CE0CBE /* KreyosUIFactoryManager.m */; };
 		35C00EB318C848C700F2671A /* LKreyosService.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C00EAE18C848C700F2671A /* LKreyosService.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		35C00EB418C848C700F2671A /* LkDiscovery.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C00EB018C848C700F2671A /* LkDiscovery.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		35D84A9218D2D1F100872B81 /* KreyosSVGButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D84A9118D2D1F100872B81 /* KreyosSVGButton.m */; };
+		35D84A9818D2D65E00872B81 /* walking.svg in Resources */ = {isa = PBXBuildFile; fileRef = 35D84A9718D2D65E00872B81 /* walking.svg */; };
+		35D84AA418D2E80A00872B81 /* new-icon.svg in Resources */ = {isa = PBXBuildFile; fileRef = 35D84AA318D2E80A00872B81 /* new-icon.svg */; };
 		35D9629218C9A15F009C97BA /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D9629118C9A15F009C97BA /* CoreText.framework */; };
 		35D9629418C9A18A009C97BA /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D9629318C9A18A009C97BA /* CoreImage.framework */; };
 		35D9629618C9A191009C97BA /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D9629518C9A191009C97BA /* libxml2.dylib */; };
 		35D9629818C9A196009C97BA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D9629718C9A196009C97BA /* QuartzCore.framework */; };
+		35E2892D18D1F00A00ADCD2C /* KreyosActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E2892C18D1F00A00ADCD2C /* KreyosActivityViewController.m */; };
 		35E7A11D18C978BA00A7E941 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35E7A11C18C978BA00A7E941 /* MapKit.framework */; };
 		35E7A12018C992AE00A7E941 /* KreyosBluetoothViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E7A11F18C992AE00A7E941 /* KreyosBluetoothViewController.m */; };
 		35F9C3EC18C8619700290DF0 /* AMSlideMenuContentSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F9C3DE18C8619700290DF0 /* AMSlideMenuContentSegue.m */; };
@@ -235,8 +244,6 @@
 		35F9C3F118C8619700290DF0 /* AMSlideMenuRightTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F9C3E918C8619700290DF0 /* AMSlideMenuRightTableViewController.m */; };
 		35F9C3F218C8619700290DF0 /* UIViewController+AMSlideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F9C3EB18C8619700290DF0 /* UIViewController+AMSlideMenu.m */; };
 		35F9C3F818C8735E00290DF0 /* MainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F9C3F718C8735E00290DF0 /* MainVC.m */; };
-		95D4B8DA18D089D7003267D3 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95D4B8D918D089D7003267D3 /* FacebookSDK.framework */; };
-		95D4B8DC18D08A2E003267D3 /* libSVGKit-iOS.1.2.0pre.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95D4B8DB18D08A2E003267D3 /* libSVGKit-iOS.1.2.0pre.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -406,6 +413,8 @@
 		352FEF7518D1AC900098827F /* AppIcon114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon114.png; sourceTree = "<group>"; };
 		352FEF8418D1B2D80098827F /* KreyosSVGImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KreyosSVGImageView.h; sourceTree = "<group>"; };
 		352FEF8518D1B2D80098827F /* KreyosSVGImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KreyosSVGImageView.m; sourceTree = "<group>"; };
+		352FEF8F18D1E71E0098827F /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		352FEF9118D1E73F0098827F /* libSVGKit-iOS.1.2.0pre.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libSVGKit-iOS.1.2.0pre.a"; sourceTree = "<group>"; };
 		353DDDE818C963DC00141480 /* SetNewGoalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetNewGoalViewController.h; sourceTree = "<group>"; };
 		353DDDE918C963DC00141480 /* SetNewGoalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetNewGoalViewController.m; sourceTree = "<group>"; };
 		353DDDEC18C9665900141480 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = Base; path = KreyosIosApp/Base.lproj/Main; sourceTree = "<group>"; };
@@ -567,6 +576,10 @@
 		3579267F18C9ABE600EF8017 /* greenbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenbar.png; sourceTree = "<group>"; };
 		3579268018C9ABE600EF8017 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
 		3579268118C9ABE600EF8017 /* watch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = watch.png; sourceTree = "<group>"; };
+		3595CFC318D2974500170289 /* FirmwareUpdateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirmwareUpdateViewController.h; sourceTree = "<group>"; };
+		3595CFC418D2974500170289 /* FirmwareUpdateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirmwareUpdateViewController.m; sourceTree = "<group>"; };
+		3595CFD818D2BB8000170289 /* cycling.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = cycling.svg; sourceTree = "<group>"; };
+		3595CFD918D2BB8000170289 /* running.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = running.svg; sourceTree = "<group>"; };
 		35B1339018C7FFE000CE0CBE /* KreyosIosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KreyosIosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35B1339318C7FFE000CE0CBE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		35B1339518C7FFE000CE0CBE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -610,10 +623,16 @@
 		35C00EB018C848C700F2671A /* LkDiscovery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LkDiscovery.m; sourceTree = "<group>"; };
 		35C00EB118C848C700F2671A /* LkDiscovery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LkDiscovery.h; sourceTree = "<group>"; };
 		35C00EB218C848C700F2671A /* KreyosProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KreyosProtocol.h; sourceTree = "<group>"; };
+		35D84A9018D2D1F100872B81 /* KreyosSVGButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KreyosSVGButton.h; sourceTree = "<group>"; };
+		35D84A9118D2D1F100872B81 /* KreyosSVGButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KreyosSVGButton.m; sourceTree = "<group>"; };
+		35D84A9718D2D65E00872B81 /* walking.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = walking.svg; sourceTree = "<group>"; };
+		35D84AA318D2E80A00872B81 /* new-icon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "new-icon.svg"; sourceTree = "<group>"; };
 		35D9629118C9A15F009C97BA /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		35D9629318C9A18A009C97BA /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		35D9629518C9A191009C97BA /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		35D9629718C9A196009C97BA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		35E2892B18D1F00A00ADCD2C /* KreyosActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KreyosActivityViewController.h; sourceTree = "<group>"; };
+		35E2892C18D1F00A00ADCD2C /* KreyosActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KreyosActivityViewController.m; sourceTree = "<group>"; };
 		35E7A11C18C978BA00A7E941 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		35E7A11E18C992AE00A7E941 /* KreyosBluetoothViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KreyosBluetoothViewController.h; sourceTree = "<group>"; };
 		35E7A11F18C992AE00A7E941 /* KreyosBluetoothViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KreyosBluetoothViewController.m; sourceTree = "<group>"; };
@@ -634,8 +653,6 @@
 		35F9C3EB18C8619700290DF0 /* UIViewController+AMSlideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AMSlideMenu.m"; sourceTree = "<group>"; };
 		35F9C3F618C8735E00290DF0 /* MainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainVC.h; sourceTree = "<group>"; };
 		35F9C3F718C8735E00290DF0 /* MainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainVC.m; sourceTree = "<group>"; };
-		95D4B8D918D089D7003267D3 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
-		95D4B8DB18D08A2E003267D3 /* libSVGKit-iOS.1.2.0pre.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libSVGKit-iOS.1.2.0pre.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -643,8 +660,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95D4B8DC18D08A2E003267D3 /* libSVGKit-iOS.1.2.0pre.a in Frameworks */,
-				95D4B8DA18D089D7003267D3 /* FacebookSDK.framework in Frameworks */,
+				352FEF9218D1E73F0098827F /* libSVGKit-iOS.1.2.0pre.a in Frameworks */,
+				352FEF9018D1E71E0098827F /* FacebookSDK.framework in Frameworks */,
 				35B1339818C7FFE000CE0CBE /* UIKit.framework in Frameworks */,
 				35B1339618C7FFE000CE0CBE /* CoreGraphics.framework in Frameworks */,
 				35D9629818C9A196009C97BA /* QuartzCore.framework in Frameworks */,
@@ -869,6 +886,10 @@
 		3579267E18C9AB8E00EF8017 /* UIAssets */ = {
 			isa = PBXGroup;
 			children = (
+				35D84A9718D2D65E00872B81 /* walking.svg */,
+				35D84AA318D2E80A00872B81 /* new-icon.svg */,
+				3595CFD818D2BB8000170289 /* cycling.svg */,
+				3595CFD918D2BB8000170289 /* running.svg */,
 				3579267F18C9ABE600EF8017 /* greenbar.png */,
 				3579268018C9ABE600EF8017 /* menu.png */,
 				3579268118C9ABE600EF8017 /* watch.png */,
@@ -899,8 +920,8 @@
 		35B1339218C7FFE000CE0CBE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				95D4B8DB18D08A2E003267D3 /* libSVGKit-iOS.1.2.0pre.a */,
-				95D4B8D918D089D7003267D3 /* FacebookSDK.framework */,
+				352FEF9118D1E73F0098827F /* libSVGKit-iOS.1.2.0pre.a */,
+				352FEF8F18D1E71E0098827F /* FacebookSDK.framework */,
 				357925FD18C9AA3300EF8017 /* usr */,
 				35D9629718C9A196009C97BA /* QuartzCore.framework */,
 				35D9629518C9A191009C97BA /* libxml2.dylib */,
@@ -997,6 +1018,12 @@
 				354B415918D06C7100F23143 /* SVGButton.m */,
 				352FEF8418D1B2D80098827F /* KreyosSVGImageView.h */,
 				352FEF8518D1B2D80098827F /* KreyosSVGImageView.m */,
+				35E2892B18D1F00A00ADCD2C /* KreyosActivityViewController.h */,
+				35E2892C18D1F00A00ADCD2C /* KreyosActivityViewController.m */,
+				3595CFC318D2974500170289 /* FirmwareUpdateViewController.h */,
+				3595CFC418D2974500170289 /* FirmwareUpdateViewController.m */,
+				35D84A9018D2D1F100872B81 /* KreyosSVGButton.h */,
+				35D84A9118D2D1F100872B81 /* KreyosSVGButton.m */,
 			);
 			name = Scripts;
 			sourceTree = "<group>";
@@ -1024,10 +1051,10 @@
 		35B133DA18C8060D00CE0CBE /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				35D9620C18C9A037009C97BA /* Badges */,
 				352FEF6A18D1AC870098827F /* app_icon */,
 				354B412718D05A1F00F23143 /* sports_icons */,
 				3579267E18C9AB8E00EF8017 /* UIAssets */,
-				35D9620C18C9A037009C97BA /* Badges */,
 				35B133D418C801CB00CE0CBE /* kreyos_nav_logo.png */,
 				35B133D518C801CB00CE0CBE /* kreyos_nav_logo@2x.png */,
 			);
@@ -1276,6 +1303,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = KrisJulio;
 				TargetAttributes = {
+					35B1338F18C7FFE000CE0CBE = {
+						DevelopmentTeam = RB9DYC2ZMR;
+					};
 					35B133B018C7FFE000CE0CBE = {
 						TestTargetID = 35B1338F18C7FFE000CE0CBE;
 					};
@@ -1380,6 +1410,8 @@
 				35032ADA18CDC0900047B5E9 /* sync_10.svg in Resources */,
 				35032AA818CDC0900047B5E9 /* excessive_steps_1month_1mil.svg in Resources */,
 				35032AC918CDC0900047B5E9 /* personal_goals_12.svg in Resources */,
+				35D84AA418D2E80A00872B81 /* new-icon.svg in Resources */,
+				35D84A9818D2D65E00872B81 /* walking.svg in Resources */,
 				352FEF7618D1AC900098827F /* AppIcon29x29.png in Resources */,
 				35032ABB18CDC0900047B5E9 /* login_120.svg in Resources */,
 				353DDDED18C9665900141480 /* Main in Resources */,
@@ -1443,12 +1475,14 @@
 				35032AD318CDC0900047B5E9 /* share_25.svg in Resources */,
 				354B414B18D05A2000F23143 /* menu_icon_stats.svg in Resources */,
 				35032A8F18CDC0900047B5E9 /* daily_steps25k.svg in Resources */,
+				3595CFDC18D2BB8000170289 /* running.svg in Resources */,
 				352FEF7D18D1AC900098827F /* AppIcon60x60@2x.png in Resources */,
 				35032ADC18CDC0900047B5E9 /* sync_50.svg in Resources */,
 				35032AC118CDC0900047B5E9 /* nile_river.svg in Resources */,
 				3579268218C9ABE600EF8017 /* greenbar.png in Resources */,
 				35032AE718CDC0900047B5E9 /* walk_15k.svg in Resources */,
 				35032A6718CDC0900047B5E9 /* active_time5k.svg in Resources */,
+				3595CFDB18D2BB8000170289 /* cycling.svg in Resources */,
 				35032AB118CDC0900047B5E9 /* full_marathon.svg in Resources */,
 				35032AE418CDC0900047B5E9 /* upsell_mission_sync.svg in Resources */,
 				35032AC318CDC0900047B5E9 /* personal_goals_2.svg in Resources */,
@@ -1509,6 +1543,8 @@
 			files = (
 				350329CD18CD83FF0047B5E9 /* Reachability.m in Sources */,
 				35F9C3EC18C8619700290DF0 /* AMSlideMenuContentSegue.m in Sources */,
+				35E2892D18D1F00A00ADCD2C /* KreyosActivityViewController.m in Sources */,
+				35D84A9218D2D1F100872B81 /* KreyosSVGButton.m in Sources */,
 				3521FE2B18C84B6F00001F98 /* LKreyosService.h in Sources */,
 				352FEF8618D1B2D80098827F /* KreyosSVGImageView.m in Sources */,
 				35F9C3ED18C8619700290DF0 /* AMSlideMenuLeftMenuSegue.m in Sources */,
@@ -1525,6 +1561,7 @@
 				350329CA18CD81A40047B5E9 /* KreyosFacebookController.m in Sources */,
 				35B133EC18C80F9C00CE0CBE /* CustomSegue.m in Sources */,
 				35F9C3F818C8735E00290DF0 /* MainVC.m in Sources */,
+				3595CFC518D2974500170289 /* FirmwareUpdateViewController.m in Sources */,
 				35B133ED18C80F9C00CE0CBE /* CustomUnwindSegue.m in Sources */,
 				35F9C3F118C8619700290DF0 /* AMSlideMenuRightTableViewController.m in Sources */,
 				35B133E218C8072100CE0CBE /* TCCustomFont.m in Sources */,
@@ -1672,9 +1709,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/joemacmini/Documents/FacebookSDK,
+					/Users/krisjulio/Downloads/FacebookSDK,
+					/Users/krisjulio/Documents/FacebookSDK,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KreyosIosApp/KreyosIosApp-Prefix.pch";
@@ -1683,11 +1723,12 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\\\\\\\"$(SRCROOT)/\\\\\\\"",
-					/Users/joemacmini/iOSKreyosApp,
+					"\\\\\\\\\\\\\\\"$(SRCROOT)/\\\\\\\\\\\\\\\"",
+					/Users/krisjulio/iOSKreyosApp,
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1698,9 +1739,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/joemacmini/Documents/FacebookSDK,
+					/Users/krisjulio/Downloads/FacebookSDK,
+					/Users/krisjulio/Documents/FacebookSDK,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KreyosIosApp/KreyosIosApp-Prefix.pch";
@@ -1709,11 +1753,12 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\\\\\\\"$(SRCROOT)/\\\\\\\"",
-					/Users/joemacmini/iOSKreyosApp,
+					"\\\\\\\\\\\\\\\"$(SRCROOT)/\\\\\\\\\\\\\\\"",
+					/Users/krisjulio/iOSKreyosApp,
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

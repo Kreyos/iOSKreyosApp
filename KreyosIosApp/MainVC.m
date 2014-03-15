@@ -45,6 +45,9 @@
         case 0:
             identifier = @"home";
             break;
+        case 1:
+            identifier = @"activity";
+            break;
         case 2:
             identifier = @"sports";
             break;
@@ -60,9 +63,6 @@
     NSString *identifier = @"";
     switch (indexPath.row) {
         case 0:
-            identifier = @"home";
-            break;
-        case 1:
             identifier = @"bluetooth";
             break;
         case 7:

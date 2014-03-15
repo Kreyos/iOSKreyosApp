@@ -584,6 +584,20 @@ NSString *kServiceEnteredForegroundNotification = @"kServiceEnteredForegroundNot
     return nil;
 }
 
+-(NSData*) readFileDesc
+{
+    [self readKreyosfrom:BLE_HANDLE_FILE_DESC];
+    if(BLE_HANDLE_FILE_DESC_CHARACTERISTIC)
+    {
+        id data32[20];
+        [[BLE_HANDLE_FILE_DESC_CHARACTERISTIC value] getBytes:&data32 length:sizeof(data32)];
+        NSData *data = [NSData dataWithBytes:&data32 length:sizeof(data32)];
+        return data;
+    }
+    
+    return nil;
+}
+
 #pragma data-interface-write
 - (void) writeData:(NSData*)value characterisc: (NSString*)cc
 {

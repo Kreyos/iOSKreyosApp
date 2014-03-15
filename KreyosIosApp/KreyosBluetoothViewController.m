@@ -21,8 +21,6 @@
 @property (retain, nonatomic) NSMutableArray            *connectedServices;
 @property (retain, nonatomic) CBPeripheral              *connectedperipheral;
 @property (retain, nonatomic) UILabel                   *currentlyConnectedSensor;
-@property (retain, nonatomic) LKreyosService            *currentlyDisplayingService;
-
 
 @end
 
@@ -115,62 +113,12 @@ static KreyosBluetoothViewController *sharedInstance = nil;
     currentlyConnectedSensor.text = @"";
     currentlyConnectedSensor.textAlignment = UITextAlignmentCenter;
     
-    //Gesture Control Allocation
-    /*UILabel *bluetoothLbl = [[[UILabel alloc] initWithFrame:CGRectMake(10, 45, 200, 50)] autorelease];
-     bluetoothLbl.text = @"Bluetooth Enable";
-     bluetoothLbl.font = REGULAR_FONT_WITH_SIZE(20);
-     bluetoothLbl.textColor = fontClr;
-     
-     IASKSwitch *toggle = [[[IASKSwitch alloc] initWithFrame:CGRectMake(shadowWidth - 70, 50, 60, 27)] autorelease];
-     [toggle addTarget:self action:@selector(Toggle:) forControlEvents:UIControlEventValueChanged];
-     toggle.on = NO;*/
-    
     //Add found devices list table
    
     sensorsTable.backgroundColor = [UIColor clearColor];
     sensorsTable.layer.opacity = 0.5f;
     sensorsTable.dataSource = self;
     sensorsTable.delegate = self;
-    
-    
-    //Add Scan Btn
-    /*m_scanBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    m_scanBtn.frame = CGRectMake(10, shadowHeight - 130, shadowWidth - 25, 50);
-    [m_scanBtn setTitle:@"Scan" forState:UIControlStateNormal];
-    [m_scanBtn addTarget:self action:@selector(scan:) forControlEvents:UIControlEventTouchDown];
-    m_scanBtn.titleLabel.font = PRIMARY_BUTTON_FONT;
-    
-    [m_scanBtn setBackgroundImage:[[UIImage imageNamed:@"btn_primary_blue"] resizableImageWithCapInsets:UIEdgeInsetsMake(6,6,6,6)] forState:UIControlStateNormal];
-    [m_scanBtn setBackgroundImage:[[UIImage imageNamed:@"btn_primary_blue_highlight"] resizableImageWithCapInsets:UIEdgeInsetsMake(6,6,6,6)] forState:UIControlStateHighlighted];
-    [m_scanBtn setHighlighted:false];
-    
-    
-    //DIsconnect label btn
-    m_disconnectBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    m_disconnectBtn.frame = CGRectMake(10, shadowHeight - 70, shadowWidth - 25, 50);
-    [m_disconnectBtn setTitle:@"Disconnect" forState:UIControlStateNormal];
-    [m_disconnectBtn addTarget:self action:@selector(disconnectToDevice:) forControlEvents:UIControlEventTouchDown];
-    m_disconnectBtn.titleLabel.font = PRIMARY_BUTTON_FONT;
-    
-    [m_disconnectBtn setBackgroundImage:[[UIImage imageNamed:@"btn_primary_blue"] resizableImageWithCapInsets:UIEdgeInsetsMake(6,6,6,6)] forState:UIControlStateNormal];
-    [m_disconnectBtn setBackgroundImage:[[UIImage imageNamed:@"btn_primary_blue_highlight"] resizableImageWithCapInsets:UIEdgeInsetsMake(6,6,6,6)] forState:UIControlStateHighlighted];
-    [m_disconnectBtn setHighlighted:false];
-    
-    //int bluetoothVal = [m_userdef integerForKey:@"bluetooth"];
-    
-    //toggle.on = bluetoothVal == 1 ? YES : NO;
-    
-    [m_userdef synchronize];
-    
-    [m_shadowView addSubview:m_scanBtn];
-    [m_shadowView addSubview:m_disconnectBtn];
-    [m_shadowView addSubview:currentlyConnectedSensor];
-    //[m_shadowView addSubview:bluetoothLbl];
-    //[m_shadowView addSubview:toggle];
-   
-    ADD_TO_ROOT_VIEW2(m_shadowView);
-    ADD_TO_ROOT_VIEW2(sensorsTable);
-      */
 }
 
 
@@ -290,6 +238,7 @@ static KreyosBluetoothViewController *sharedInstance = nil;
     else if ([characteristic isEqual:BLE_HANDLE_FILE_DESC]) {
         NSString* i;
         [value getBytes: &i length: sizeof(i)];
+        
     }
     else if ([characteristic isEqual:BLE_HANDLE_FILE_DATA]) {
         int8_t i[80];
@@ -368,6 +317,9 @@ static KreyosBluetoothViewController *sharedInstance = nil;
         //fire interval checking for bluetooth data
         [self startTimer];
         
+        //invalidate reconnection timer
+        [reconnectionTimer invalidate];
+        
         //UpdateTime
         [self updateTime];
         
@@ -376,11 +328,14 @@ static KreyosBluetoothViewController *sharedInstance = nil;
     
     else {
         NSLog(@"Service (%@) disconnected", service.peripheral.name);
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Kreyos Disconnected!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        /*UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Kreyos Disconnected!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alertView show];
+        */
         
         if ([connectedServices containsObject:service]) {
             [connectedServices removeObject:service];
+            
+            reconnectionTimer = [[NSTimer alloc] init];
         }
         
         [[SportsPageViewController sharedInstance] updateTimer:1];
@@ -408,9 +363,10 @@ static KreyosBluetoothViewController *sharedInstance = nil;
     static NSString *cellID = @"DeviceList";
     
 	cell = [tableView dequeueReusableCellWithIdentifier:cellID];
-	if (!cell)
+	if (!cell){
 		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellID];
-    
+        cell.backgroundColor = [UIColor clearColor];
+    }
 	if ([indexPath section] == 0) {
 		devices = [[LkDiscovery sharedInstance] connectedServices];
         peripheral = [(LKreyosService*)[devices objectAtIndex:row] peripheral];
@@ -499,8 +455,7 @@ static KreyosBluetoothViewController *sharedInstance = nil;
 {
     NSLog(@"refish!");
     [sensorsTable reloadData];
-    
-    [[[KreyosHomeViewController sharedInstance] bluetoothTable] reloadData];
+    [[KreyosHomeViewController sharedInstance].bluetoothTable reloadData];
 }
 
 - (void) discoveryStatePoweredOff
@@ -536,24 +491,7 @@ static KreyosBluetoothViewController *sharedInstance = nil;
 #pragma mark - Read / Write
 -(void) doWrite:(NSData*)dataValue forCharacteristics:(NSString*)characteristic
 {
-    //*** Sample of wirte some thing to charactristic "BLE_HANDLE_TEST_READ" ***//
-    /*
-     NSString *setting=[[self hour] text];
-     NSLog(@"sample of writing data to the peripheral %@",setting);
-     
-     NSData  *data	= nil;
-     int8_t value    = (int8_t)[setting intValue];
-     
-     //Note: You should do some data validations here
-     
-     data = [NSData dataWithBytes:&value length:sizeof (value)];
-     [currentlyDisplayingService writeKreyos:data toCharacteristic:p_bleKey];
-     
-     int8_t i;
-     [value getBytes: &i length: sizeof(i)];
-     NSString *showValue=[NSString stringWithFormat:@"form <%@>:%d",characteristic,i];
-     [_showReadValue setText:showValue];
-     */
+
     if ( connectedperipheral == nil) return;
     
     NSLog(@"Characteristices %@", characteristic);
@@ -645,12 +583,6 @@ static KreyosBluetoothViewController *sharedInstance = nil;
 {
     [currentlyDisplayingService readKreyosfrom:p_bleKey];
     
-    /*
-    if ( [p_bleKey isEqualToString:BLE_HANDLE_FILE_DESC ])
-    {
-        return [currentlyDisplayingService readFileDescInfo];
-    }*/
-    
     return  nil;
 }
 
@@ -674,6 +606,15 @@ static KreyosBluetoothViewController *sharedInstance = nil;
         fetchTimer = [NSTimer scheduledTimerWithTimeInterval:3.0f target:self selector:@selector(fetchSportsDataFromWatch:) userInfo:nil repeats:YES];
         
     }
+    
+}
+
+- (void) startReconnectionTimer
+{
+    if ( reconnectionTimer )
+        [reconnectionTimer fire];
+    else
+        reconnectionTimer = [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(connectPeripheral:) userInfo:connectedperipheral repeats:YES];
     
 }
 

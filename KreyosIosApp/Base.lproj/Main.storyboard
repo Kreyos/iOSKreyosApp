@@ -18,7 +18,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HA8-qP-soa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2956" y="-1658"/>
+            <point key="canvasLocation" x="2956" y="-2874"/>
         </scene>
         <!--HomePage-->
         <scene sceneID="ufC-wZ-h7g">
@@ -83,7 +83,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="3fv-wa-W10" kind="push" id="Qzw-H6-LDp"/>
+                                            <segue destination="3fv-wa-W10" kind="push" id="IX6-hs-Tf7"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -227,72 +227,61 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3664" y="-1658"/>
+            <point key="canvasLocation" x="3664" y="-2874"/>
         </scene>
         <!--Set New Goal View Controller - SetActivity-->
         <scene sceneID="mLY-F0-6i4">
             <objects>
                 <viewController title="SetActivity" id="3fv-wa-W10" customClass="SetNewGoalViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dmb-hF-uct">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="dJT-5R-4HQ">
-                                <rect key="frame" x="0.0" y="80" width="320" height="488"/>
+                                <rect key="frame" x="0.0" y="80" width="320" height="424"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="TNx-8R-Kff">
-                                        <rect key="frame" x="73" y="72" width="175" height="127"/>
+                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="active_time7_5k" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BES-RL-RP0" userLabel="final" customClass="KreyosSVGButton">
+                                        <rect key="frame" x="90" y="91" width="141" height="113"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Running">
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <state key="normal">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="jgd-if-9OC" kind="push" id="7qH-m4-OiT"/>
+                                            <segue destination="jgd-if-9OC" kind="push" id="Lzc-xd-voq"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oxh-Hw-V2N">
-                                        <rect key="frame" x="73" y="285" width="175" height="127"/>
+                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="active_time5k" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mcQ-uT-j7U" customClass="KreyosSVGButton">
+                                        <rect key="frame" x="167" y="230" width="133" height="113"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Cycling">
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <state key="normal">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <connections>
-                                            <segue destination="jgd-if-9OC" kind="push" id="heq-3x-do5"/>
-                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="active_time5k" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="HQb-RZ-NFx" customClass="KreyosSVGButton">
+                                        <rect key="frame" x="26" y="230" width="125" height="113"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" id="YIf-wX-KSl" userLabel="TopBar">
-                                <rect key="frame" x="0.0" y="0.0" width="324" height="79"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SET ACTIVITY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9JY-Pg-bcd">
-                                        <rect key="frame" x="70" y="30" width="184" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="25"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.094117647060000004" green="0.69411764710000001" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
-                    <navigationItem key="navigationItem" id="ZJa-tq-B6E"/>
-                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationItem key="navigationItem" title="SET ACTIVITY" id="L7P-yF-LDr"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="firstActivityBtn" destination="TNx-8R-Kff" id="xrg-Wo-Wq7"/>
-                        <outlet property="secondActivityBtn" destination="oxh-Hw-V2N" id="I9P-Ch-cWC"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MS8-vk-MJ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4254" y="-1658"/>
+            <point key="canvasLocation" x="4288" y="-2842"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Hmf-AZ-9La">
@@ -482,7 +471,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="friends_list_sidebar" id="IXW-R6-iJ5" userLabel="friendsListImage" customClass="KreyosSVGImageView">
-                                                    <rect key="frame" x="0.0" y="9" width="43" height="25"/>
+                                                    <rect key="frame" x="5" y="4" width="38" height="36"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
@@ -504,7 +493,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="activity_sidebar" id="kvN-32-H3g" userLabel="activityImage" customClass="KreyosSVGImageView">
-                                                    <rect key="frame" x="0.0" y="9" width="43" height="25"/>
+                                                    <rect key="frame" x="5" y="4" width="38" height="36"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
@@ -526,7 +515,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="sportsmode_sidebar" id="nTZ-pK-Hb7" userLabel="sportsImage" customClass="KreyosSVGImageView">
-                                                    <rect key="frame" x="0.0" y="9" width="43" height="25"/>
+                                                    <rect key="frame" x="5" y="4" width="38" height="36"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
@@ -548,7 +537,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="settings_sidebar" id="S3Z-HP-Ubx" userLabel="settingsImag" customClass="KreyosSVGImageView">
-                                                    <rect key="frame" x="0.0" y="9" width="43" height="25"/>
+                                                    <rect key="frame" x="5" y="4" width="38" height="36"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
@@ -566,6 +555,7 @@
                     <connections>
                         <segue destination="mr9-S1-Ex8" kind="custom" identifier="home" customClass="AMSlideMenuContentSegue" id="oH6-it-7Ou"/>
                         <segue destination="XqH-kf-wqN" kind="custom" identifier="sports" customClass="AMSlideMenuContentSegue" id="YAb-TH-yqr"/>
+                        <segue destination="BIo-p9-cQo" kind="custom" identifier="activity" customClass="AMSlideMenuContentSegue" id="jZR-Ax-qnQ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tE8-BJ-ros" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -604,7 +594,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="battery_rightsidebar" id="Eff-aq-136" userLabel="batteryImg" customClass="KreyosSVGImageView">
-                                                    <rect key="frame" x="13" y="11" width="43" height="25"/>
+                                                    <rect key="frame" x="11" y="4" width="45" height="36"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
@@ -767,61 +757,81 @@
                                 <rect key="frame" x="0.0" y="80" width="320" height="488"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bax-Y0-k5C">
-                                        <rect key="frame" x="73" y="180" width="175" height="127"/>
+                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="active_time1_5k" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bax-Y0-k5C" customClass="KreyosSVGButton">
+                                        <rect key="frame" x="104" y="227" width="112" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Sports Type">
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <state key="normal">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Jyy-I5-tZj">
-                                        <rect key="frame" x="124" y="120" width="72" height="52"/>
+                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="active_time100" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Jyy-I5-tZj" customClass="KreyosSVGButton">
+                                        <rect key="frame" x="135" y="148" width="51" height="45"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Group 1">
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <state key="normal">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="U17-V9-kZb" kind="push" id="wB3-qF-Zih"/>
+                                            <segue destination="U17-V9-kZb" kind="push" id="xRa-k5-bBo"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="A8b-O8-ysm">
-                                        <rect key="frame" x="29" y="304" width="72" height="52"/>
+                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="active_time150" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ajP-JX-8VQ" customClass="KreyosSVGButton">
+                                        <rect key="frame" x="135" y="81" width="51" height="45"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Group 2">
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <state key="normal">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pZw-aa-bfY">
-                                        <rect key="frame" x="221" y="304" width="72" height="52"/>
+                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="active_time200" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cxF-47-EVb" customClass="KreyosSVGButton">
+                                        <rect key="frame" x="135" y="16" width="51" height="45"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Group 2">
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="daily_steps5k" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="A8b-O8-ysm" customClass="KreyosSVGButton">
+                                        <rect key="frame" x="42" y="345" width="53" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="consecutive_sync_2w" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pZw-aa-bfY" customClass="KreyosSVGButton">
+                                        <rect key="frame" x="232" y="345" width="55" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="consecutive_sync_3w" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="RYe-hb-m8S" customClass="KreyosSVGButton">
+                                        <rect key="frame" x="292" y="402" width="55" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="daily_steps10k" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vf4-Ei-bvt" customClass="KreyosSVGButton">
+                                        <rect key="frame" x="-20" y="402" width="55" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <state key="normal">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" id="c4t-ff-9d3" userLabel="TopBar">
-                                <rect key="frame" x="-4" y="0.0" width="324" height="82"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SET NEW GOAL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3I6-Ns-Sp6">
-                                        <rect key="frame" x="70" y="30" width="184" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="25"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.094117647060000004" green="0.69411764710000001" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="h4W-vt-m3h">
-                        <nil key="title"/>
-                    </navigationItem>
-                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationItem key="navigationItem" title="SET A NEW GOAL" id="h4W-vt-m3h"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="group_1_btn" destination="Jyy-I5-tZj" id="JhX-ru-b0b"/>
                         <outlet property="group_2_btn" destination="A8b-O8-ysm" id="zut-Xs-G9K"/>
@@ -830,7 +840,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ITp-4b-g4t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4762" y="-1658"/>
+            <point key="canvasLocation" x="4874" y="-2834"/>
         </scene>
         <!--Set New Goal View Controller - PreStart-->
         <scene sceneID="dau-dj-fOJ">
@@ -870,43 +880,27 @@
                                             <action selector="dismissThisView:" destination="U17-V9-kZb" eventType="touchUpInside" id="d9m-nM-7TJ"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kreyos_nav_logo.png" id="KGh-VN-D7i">
-                                        <rect key="frame" x="57" y="51" width="207" height="55"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="active_time100" id="KGh-VN-D7i" customClass="KreyosSVGImageView">
+                                        <rect key="frame" x="57" y="53" width="207" height="186"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="picknewgoal_icon" id="qN3-eF-CNg" userLabel="batteryImg" customClass="KreyosSVGImageView">
-                                        <rect key="frame" x="64" y="370" width="43" height="25"/>
+                                        <rect key="frame" x="63" y="363" width="36" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" id="pVa-1h-laU" userLabel="TopBar">
-                                <rect key="frame" x="-4" y="0.0" width="324" height="82"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="START A GOAL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="i53-TU-Wtm">
-                                        <rect key="frame" x="70" y="30" width="184" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="25"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.094117647060000004" green="0.69411764710000001" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="4Zm-IO-3cb">
-                        <nil key="title"/>
-                    </navigationItem>
-                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationItem key="navigationItem" title="START A NEW GOAL" id="4Zm-IO-3cb"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Au8-4b-zsK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5278" y="-1658"/>
+            <point key="canvasLocation" x="5470" y="-2810"/>
         </scene>
         <!--Sports Page View Controller - StartWorkout-->
         <scene sceneID="t31-Ph-I4E">
@@ -917,41 +911,41 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="0GV-Na-Qn6" userLabel="LowerView">
-                                <rect key="frame" x="0.0" y="80" width="320" height="488"/>
+                                <rect key="frame" x="0.0" y="63" width="320" height="505"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" restorationIdentifier="DataHolder" id="1i1-nd-vvW" userLabel="DataHolder">
-                                        <rect key="frame" x="20" y="20" width="280" height="448"/>
+                                        <rect key="frame" x="9" y="10" width="302" height="483"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="mZ2-2S-sRz">
-                                                <rect key="frame" x="0.0" y="0.0" width="280" height="92"/>
+                                                <rect key="frame" x="7" y="6" width="289" height="113"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             </mapView>
                                             <view contentMode="scaleToFill" id="QET-iS-Vco" userLabel="TimerView">
-                                                <rect key="frame" x="0.0" y="92" width="280" height="100"/>
+                                                <rect key="frame" x="7" y="119" width="290" height="100"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wS0-F6-FiB" userLabel="Timer">
-                                                        <rect key="frame" x="81" y="20" width="199" height="80"/>
+                                                        <rect key="frame" x="86" y="20" width="199" height="80"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="55"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ACTIVE NOW" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GO2-wG-Jdm" userLabel="Active">
-                                                        <rect key="frame" x="81" y="11" width="105" height="21"/>
+                                                        <rect key="frame" x="86" y="11" width="105" height="21"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="17"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" id="VRg-DW-sIA">
-                                                        <rect key="frame" x="14" y="20" width="53" height="50"/>
+                                                        <rect key="frame" x="19" y="20" width="53" height="50"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     </view>
                                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" id="w6r-OV-SH2">
-                                                        <rect key="frame" x="14" y="78" width="53" height="2"/>
+                                                        <rect key="frame" x="19" y="78" width="53" height="2"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <inset key="insetFor6xAndEarlier" minX="0.0" minY="0.0" maxX="0.0" maxY="3"/>
                                                         <color key="progressTintColor" red="0.26274509800000001" green="0.68235294120000001" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
@@ -960,7 +954,7 @@
                                                 <color key="backgroundColor" red="0.76078431372549016" green="0.9137254901960784" blue="0.2627450980392157" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" id="kCm-7U-0Wg" userLabel="Cell_1">
-                                                <rect key="frame" x="0.0" y="192" width="140" height="100"/>
+                                                <rect key="frame" x="7" y="219" width="145" height="100"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QHZ-jJ-oDg" userLabel="value">
@@ -990,7 +984,7 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                             <view tag="1" contentMode="scaleToFill" id="ZO1-Ta-u9l" userLabel="Cell_2">
-                                                <rect key="frame" x="140" y="192" width="140" height="100"/>
+                                                <rect key="frame" x="152" y="219" width="145" height="100"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PACE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nyG-Wu-Tbn" userLabel="category">
@@ -1020,7 +1014,7 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                             <view tag="2" contentMode="scaleToFill" id="WIV-LR-3E3" userLabel="Cell_3">
-                                                <rect key="frame" x="0.0" y="292" width="140" height="100"/>
+                                                <rect key="frame" x="7" y="318" width="145" height="100"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DISTANCE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JKP-yd-M5v" userLabel="category">
@@ -1050,7 +1044,7 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                             <view tag="4" contentMode="scaleToFill" id="ryZ-sM-xEl" userLabel="Cell_4">
-                                                <rect key="frame" x="140" y="292" width="140" height="99"/>
+                                                <rect key="frame" x="152" y="318" width="145" height="99"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CALORIES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZqQ-EF-WqF" userLabel="category">
@@ -1080,7 +1074,7 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JZg-7W-gHe" userLabel="Start">
-                                                <rect key="frame" x="9" y="404" width="262" height="32"/>
+                                                <rect key="frame" x="7" y="431" width="289" height="32"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.25098040699958801" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="15"/>
@@ -1093,7 +1087,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Moy-iS-u7O" userLabel="Pause">
-                                                <rect key="frame" x="9" y="404" width="262" height="32"/>
+                                                <rect key="frame" x="7" y="431" width="289" height="32"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.40000000596046448" green="0.80000001192092896" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="15"/>
@@ -1107,7 +1101,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Irp-64-5kJ" userLabel="Resume">
-                                                <rect key="frame" x="9" y="404" width="130" height="32"/>
+                                                <rect key="frame" x="7" y="431" width="143" height="32"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.76078431369999999" green="0.91372549020000005" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="15"/>
@@ -1117,7 +1111,7 @@
                                                 </state>
                                             </button>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dK6-dk-FfW" userLabel="Stop">
-                                                <rect key="frame" x="141" y="404" width="130" height="32"/>
+                                                <rect key="frame" x="152" y="431" width="144" height="32"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="15"/>
@@ -1130,7 +1124,7 @@
                                                 </connections>
                                             </button>
                                             <view tag="3" contentMode="scaleToFill" id="7Z0-rU-nZ6" userLabel="AddBtn">
-                                                <rect key="frame" x="240" y="355" width="25" height="25"/>
+                                                <rect key="frame" x="251" y="382" width="25" height="25"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             </view>
@@ -1140,27 +1134,11 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" id="eKS-QW-fCI" userLabel="TopBar">
-                                <rect key="frame" x="-4" y="0.0" width="324" height="67"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ACTIVE WORKOUT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qUQ-Zb-x4I">
-                                        <rect key="frame" x="70" y="30" width="184" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="25"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.094117647060000004" green="0.69411764710000001" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="d6P-hG-oHJ">
-                        <nil key="title"/>
-                    </navigationItem>
-                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationItem key="navigationItem" title="SPORTS ACTIVITY" id="4Av-6M-6Sk"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="activeOrInactiveLabel" destination="GO2-wG-Jdm" id="4CO-f6-mi8"/>
@@ -1316,7 +1294,7 @@
         <!--View Controller - FirmwareUpdate-->
         <scene sceneID="EIi-NO-Y0e">
             <objects>
-                <viewController title="Bluetooth" id="kDB-Ee-ISd" userLabel="View Controller - FirmwareUpdate" sceneMemberID="viewController">
+                <viewController title="Bluetooth" id="kDB-Ee-ISd" userLabel="View Controller - FirmwareUpdate" customClass="FirmwareUpdateViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qrt-aC-k9n">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1333,7 +1311,7 @@
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="15" maxY="0.0"/>
                                         <prototypes>
                                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="kSensorCell" id="ON8-ww-hUB">
-                                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ON8-ww-hUB" id="FfB-6Y-slo">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -1351,6 +1329,9 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="updateWatchFirmware:" destination="kDB-Ee-ISd" eventType="touchUpInside" id="9TZ-NI-yUi"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -1360,11 +1341,48 @@
                     <navigationItem key="navigationItem" id="TXm-XO-SGI">
                         <nil key="title"/>
                     </navigationItem>
-                    <nil key="simulatedTopBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="firmwareUpdateBtn" destination="hzs-Xo-Orn" id="LBC-V6-K87"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Frh-Qh-ZUc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3398" y="2598"/>
+        </scene>
+        <!--Kreyos Activity View Controller - StartWorkout-->
+        <scene sceneID="SWX-0M-LwW">
+            <objects>
+                <viewController title="StartWorkout" id="S84-tW-97d" customClass="KreyosActivityViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mNf-yX-qwM" userLabel="MainView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cjN-gr-BLb">
+                        <nil key="title"/>
+                    </navigationItem>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="npA-mp-AuS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3672" y="91"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aAk-iL-jAd">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="BIo-p9-cQo" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xcd-Bq-1V5">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="S84-tW-97d" kind="relationship" relationship="rootViewController" id="4UN-eI-a7t"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ChI-TY-sYe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2956" y="91"/>
         </scene>
     </scenes>
     <resources>
@@ -1378,7 +1396,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="heq-3x-do5"/>
         <segue reference="GcY-uU-ozV"/>
     </inferredMetricsTieBreakers>
 </document>

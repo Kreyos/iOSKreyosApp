@@ -70,7 +70,8 @@ extern NSString *kServiceEnteredForegroundNotification;
 -(NSData*) readSportsData;
 -(NSData*) readSportsDesc;
 -(NSData*) readDeviceId;
--(NSData*)readGPSInfo;
+-(NSData*) readGPSInfo;
+-(NSData*) readFileDesc;
 
 //interfaces-write
 -(void) writeData:(NSData*)value characterisc: (NSString*)cc;

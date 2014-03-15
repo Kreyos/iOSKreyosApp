@@ -27,7 +27,7 @@
     self = [super initWithCoder:aDecoder];
     if (self) {
         // Initialization code
-        
+
         [self setImageAsSVGImage:[self restorationIdentifier]];
     }
     return self;
@@ -37,22 +37,17 @@
 {
     SVGKImage *svgImage = [SVGKImage imageNamed:p_svgName];
     
-    SVGKFastImageView *imageSet = [[SVGKFastImageView alloc] initWithSVGKImage:svgImage];
-    imageSet.layer.anchorPoint = CGPointMake(0, 0.5);
-    imageSet.transform = CGAffineTransformScale(imageSet.transform, 1.5f, 1.5f);
+    [svgImage setSize:self.bounds.size];
     
+    SVGKFastImageView *imageSet = [[SVGKFastImageView alloc] initWithSVGKImage:svgImage];
+    
+    UIButton *IASDA = [[UIButton alloc] init];
+    
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self.superclass action:@selector(tapHandler:)];
+    //imageSet addGestureRecognizer:<#(UIGestureRecognizer *)#>
     
     [self addSubview: imageSet];
 }
 
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
 
 @end

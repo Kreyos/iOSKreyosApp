@@ -7,6 +7,8 @@
 //
 
 #import "SetNewGoalViewController.h"
+#import "UIViewController+AMSlideMenu.h"
+#import "AMSlideMenuMainViewController.h"
 
 @interface SetNewGoalViewController ()
 
@@ -31,7 +33,13 @@
 {
     [super viewDidLoad];
     
-   [super hideNavigationItem:self];
+    AMSlideMenuMainViewController *mainVC = [AMSlideMenuMainViewController getInstanceForVC:self];
+    if (mainVC.rightMenu )
+    {
+        [self addRightMenuButton];
+        [self addLeftMenuButton];
+    }
+   //[super hideNavigationItem:self];
 }
 
 - (void)didReceiveMemoryWarning
@@ -39,6 +47,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 
 -(IBAction)dismissThisView:(id)sender

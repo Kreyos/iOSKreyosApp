@@ -173,7 +173,10 @@
     NSLog(@"Star Scanning Peripherals with %@",uuidString);
     
     NSDictionary	*options	= [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:NO] forKey:CBCentralManagerScanOptionAllowDuplicatesKey];
+    
+#if !(TARGET_IPHONE_SIMULATOR)
     [centralManager scanForPeripheralsWithServices:nil options:options];
+#endif
     
 }
 
@@ -196,8 +199,6 @@
     }
     
 }
-
-
 
 - (void) stopScanning
 {
@@ -228,6 +229,8 @@
 {
 	if (![peripheral isConnected]) {
 		[centralManager connectPeripheral:peripheral options:nil];
+        
+        
 	}
 }
 
@@ -236,6 +239,8 @@
 {
     if (![peripheral isConnected]) {
        	[centralManager cancelPeripheralConnection:peripheral];
+        
+        NSLog(@"Connecting.....");
     }
 }
 
